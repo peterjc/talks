@@ -49,33 +49,35 @@ distributed collaboration producing a freely available Python library for
 biological computation \citep{AppNote}. Biopython is supported by the Open
 Bioinformatics Foundation (OBF).
 
-There have been two releases since BOSC 2013: version 1.62 and 1.63, both
+There have been three releases since BOSC 2013: version 1.62, 1.63, and 1.64; all
 involving contributions made by new and returning developers. New features
 in version 1.62 include parsing support for NeXML and CDAO in the Bio.Phylo
 module, parsing support for GAF, GPA, and GPI formats from UniProt-GOA
 in the Bio.UniPort module, and BioSQL support for Jython, among others.
 In version 1.63, we added  support for the population genetic tool
 fastsimcoal, a wrapper for samtools, and other significant enhancements to
-existing modules. Version 1.64 is under development and is expected to be
-have been released by BOSC 2014 [{\it NB: to be revised during abstract review}].
-Since BOSC 2013, we have successfully supported Python 2, Python 3, PyPy, and
-Jython 2.7 with a single codebase. This change is also reflected in our Tutorial
-\& Cookbook, which uses code compatible with all Python versions.
+existing modules. Version 1.64 saw the addition of the Bio.CodonAlign module
+and enhancements to the Bio.Phylo module, contributed by our Google Summer
+of Code (GSoC) 2013 students. The upcoming version 1.65 is now under development.
+Moreover, since BOSC 2013 we have successfully supported Python 2, Python 3,
+PyPy, and Jython 2.7 with a single codebase. This change is also reflected in
+our Tutorial \& Cookbook, which uses code compatible with all Python versions.
 
 In addition to local installation on various operating systems, Biopython
 is now available in the Galaxy Tool Shed \citep{ToolShed} as a package
 dependency. Galaxy tools requiring Biopython can now specify this dependency
 explicitly and choose from three different Biopython versions: 1.61, 1.62, or
-1.63. We plan to continue releasing for Galaxy for upcoming versions.
+1.63. We plan to continue releasing for Galaxy for subsequent Biopython versions.
 
-We participated in Google Summer of Code (2013) under the umbrella of the
-National Evolutionary Synthesis Center (NESCent). Two students were selected:
-Yanbo Ye, working on enhancements for Bio.Phylo, and Zheng Ruan, working to add
-codon alignment and analysis support. Both students have finished their project
-successfully, with Yanbo's code integrated into the existing Bio.Phylo module
-and Zheng's code submitted as a pull request under review. We hope to mentor
-another student in GSoC 2014 who will be working on adding lazy-parsing support
-to Bio.SeqIO [{\it NB: to be revised during abstract review}].
+We participated in GSoC 2013 under the umbrella of the National Evolutionary
+Synthesis Center (NESCent). Two students were selected: Yanbo Ye, working on
+enhancements for Bio.Phylo, and Zheng Ruan, working to add codon alignment and
+analysis support. Both students have finished their project successfully, with
+Yanbo's code integrated into the existing Bio.Phylo module and Zheng's code
+submitted as a pull request under review. We continue to participate in GSoC 2014
+with the selection of Evan Parker who will be working on adding lazy-parsing
+support to Bio.SeqIO.
+
 
 \begin{thebibliography}{}
 
