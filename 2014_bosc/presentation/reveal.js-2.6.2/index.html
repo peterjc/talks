@@ -4,10 +4,10 @@
 	<head>
 		<meta charset="utf-8">
 
-		<title>reveal.js - The HTML Presentation Framework</title>
+		<title>BOSC 2014 - Biopython Update</title>
 
-		<meta name="description" content="A framework for easily creating beautiful presentations using HTML">
-		<meta name="author" content="Hakim El Hattab">
+		<meta name="description" content="Biopython Update 2014 (presented in BOSC 2014)">
+		<meta name="author" content="Wibowo Arindrarto">
 
 		<meta name="apple-mobile-web-app-capable" content="yes" />
 		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
@@ -16,6 +16,7 @@
 
 		<link rel="stylesheet" href="css/reveal.min.css">
 		<link rel="stylesheet" href="css/theme/default.css" id="theme">
+		<link rel="stylesheet" href="css/custom.css">
 
 		<!-- For syntax highlighting -->
 		<link rel="stylesheet" href="lib/css/zenburn.css">
@@ -42,319 +43,227 @@
 
 			<!-- Any section element inside of this container is displayed as a slide -->
 			<div class="slides">
+
 				<section>
-					<h1>Reveal.js</h1>
-					<h3>HTML Presentations Made Easy</h3>
+					<h1>Biopython Project Update</h1>
+					<h3>Bioinformatics Open Source Conference
+          <br />
+          Boston, July 10th 2014</h3>
+          <img style="border-radius: 10px; width: 35%;" src="img/biopython.jpg" />
 					<p>
-						<small>Created by <a href="http://hakim.se">Hakim El Hattab</a> / <a href="http://twitter.com/hakimel">@hakimel</a></small>
+              <a href="http://twitter.com/_bow_">Wibowo Arindrarto</a> (Bow),
+              <a href="http://twitter.com/pjacock">Peter Cock</a>,
+              <a href="http://twitter.com/etalevich">Eric Talevich</a>,
+              <br />and the Biopython contributors
 					</p>
+          <p style="margin-top: 1em; margin-bottom: 0; font-size: .8em;">
+            <a href="https://twitter.com/_bow_">@_bow_</a>
+            &middot;
+            <a href="https://twitter.com/search?q=%23BOSC2014">#BOSC2014</a>
+            &middot;
+            <a href="https://twitter.com/search?q=%23ISMB2014">#ISMB2014</a>
+          </p>
+          <a href=http://creativecommons.org/licenses/by-sa/4.0/" title="Licensed under the Creative Commons Attribution-ShareAlike 4.0 Licence">
+            <img style="border-radius: 5px;" src="img/cc-by-sa-4.0.png" />
+          </a>
+
+          <aside class="notes">
+            Short self intro: contributed SeqIO format, then SearchIO in GSoC, now co-mentoring with Peter (got a job in between)
+          </aside>
 				</section>
 
 				<section>
-					<h2>Heads Up</h2>
-					<p>
-						reveal.js is a framework for easily creating beautiful presentations using HTML. You'll need a browser with
-						support for CSS 3D transforms to see it in its full glory.
-					</p>
-
-					<aside class="notes">
-						Oh hey, these are some notes. They'll be hidden in your presentation, but you can see them if you open the speaker notes window (hit 's' on your keyboard).
-					</aside>
-				</section>
-
-				<!-- Example of nested vertical slides -->
-				<section>
-					<section>
-						<h2>Vertical Slides</h2>
-						<p>
-							Slides can be nested inside of other slides,
-							try pressing <a href="#" class="navigate-down">down</a>.
-						</p>
-						<a href="#" class="image navigate-down">
-							<img width="178" height="238" src="https://s3.amazonaws.com/hakim-static/reveal-js/arrow.png" alt="Down arrow">
-						</a>
-					</section>
-					<section>
-						<h2>Basement Level 1</h2>
-						<p>Press down or up to navigate.</p>
-					</section>
-					<section>
-						<h2>Basement Level 2</h2>
-						<p>Cornify</p>
-						<a class="test" href="http://cornify.com">
-							<img width="280" height="326" src="https://s3.amazonaws.com/hakim-static/reveal-js/cornify.gif" alt="Unicorn">
-						</a>
-					</section>
-					<section>
-						<h2>Basement Level 3</h2>
-						<p>That's it, time to go back up.</p>
-						<a href="#/2" class="image">
-							<img width="178" height="238" src="https://s3.amazonaws.com/hakim-static/reveal-js/arrow.png" alt="Up arrow" style="-webkit-transform: rotate(180deg);">
-						</a>
-					</section>
+          <h1>The Introduction</h1>
+          <ul>
+            <li>Collection of modules for dealing with Biological data in Python</li>
+            <li>Open source + freely available</li>
+            <li>Multiple OSes + multiple Python implementations &amp; versions</li>
+            <li>First commit in 1999</li>
+          </ul>
 				</section>
 
 				<section>
-					<h2>Slides</h2>
-					<p>
-						Not a coder? No problem. There's a fully-featured visual editor for authoring these, try it out at <a href="http://slid.es" target="_blank">http://slid.es</a>.
-					</p>
+          <h1><code>show_stats(Bio)</code></h1>
+          <figure>
+            <img style="border-radius: 10px; width: 70%;" src="img/commits.png" />
+            <figcaption><a href="http://www.ohloh.net/p/biopython/analyses/latest/languages_summary"><small>via Ohloh (June 2014)</small></a></figcaption>
+          </figure>
+          <ul>
+            <li>&gt;9,000 commits by &gt;100 contributors</li>
+            <li>Since BOSC 2013: &gt;800 commits &amp; 17 new contributors</li>
+          </ul>
 				</section>
 
-				<section>
-					<h2>Point of View</h2>
-					<p>
-						Press <strong>ESC</strong> to enter the slide overview.
-					</p>
-					<p>
-						Hold down alt and click on any element to zoom in on it using <a href="http://lab.hakim.se/zoom-js">zoom.js</a>. Alt + click anywhere to zoom back out.
-					</p>
-				</section>
+        <section>
+          <h2>New contributors since BOSC 2013</h2>
+          <div style="width: 70%; margin: auto;">
+            <div style="float: left;">
+              <ul>
+                <li>Bertrand Néron</li>
+                <li>Chris Mitchell</li>
+                <li>Chunlei Wu</li>
+                <li>Edward Liaw</li>
+                <li>Gokcen Eraslan</li>
+                <li>Josha Inglis</li>
+                <li>Konstantin Tretyakov</li>
+                <li>Manlio Calvi</li>
+                <li>Markus Piotrowski</li>
+              </ul>
+            </div>
+            <div style="float: right;">
+              <ul>
+                <li>Matsuyuki Shirota</li>
+                <li>Melissa Gymrek</li>
+                <li>Nigel Delaney</li>
+                <li>Sergei Lebedev</li>
+                <li>Vincent Davis</li>
+                <li>Wayne Decatur</li>
+                <li>Yanbo Ye</li>
+                <li>Zheng Ruan</li>
+              </ul>
+            </div>
+          </div>
+        </section>
 
-				<section>
-					<h2>Works in Mobile Safari</h2>
-					<p>
-						Try it out! You can swipe through the slides and pinch your way to the overview.
-					</p>
-				</section>
+        <section>
+          <h1>Last Time in BOSC</h1>
+          <ul>
+            <li>Peter Cock presented in Berlin</li>
+            <li>Biopython 1.62 beta released (1.62 released shortly after)</li>
+            <li>Two Google Summer of Code (GSoC) students (with NESCent)</li>
+          </ul>
+        </section>
 
-				<section>
-					<h2>Marvelous Unordered List</h2>
-					<ul>
-						<li>No order here</li>
-						<li>Or here</li>
-						<li>Or here</li>
-						<li>Or here</li>
-					</ul>
-				</section>
+        <section>
+          <h1><code>Bio.CodonAlignment</code> <small>Biopython 1.64</small></h1>
+          <ul>
+            <li>GSoC 2013 project, now an experimental module</li>
+            <li>Codon alignment analysis: objects &amp; analysis methods</li>
+            <li><em>Mentors</em>: Eric Talevich &amp; Peter Cock</li>
+          </ul>
+        </section>
 
-				<section>
-					<h2>Fantastic Ordered List</h2>
-					<ol>
-						<li>One is smaller than...</li>
-						<li>Two is smaller than...</li>
-						<li>Three!</li>
-					</ol>
-				</section>
+        <section>
+          <h1><code>Bio.Phylo</code> enhancements <small>Biopython 1.64</small></h1>
+          <ul>
+            <li>GSoC 2013 project</li>
+            <li>Improved phylogenetic analysis with <code>Bio.Phylo</code>: tree consensus, tree comparisons, etc.</li>
+            <li><em>Mentors</em>: Mark Holder, Jeet Sukumaran, &amp; Eric Talevich</li>
+          </ul>
+        </section>
 
-				<section data-markdown>
-					<script type="text/template">
-						## Markdown support
+        <section>
+          <h1>Other additions <br /><small>Biopython 1.62-1.65+</small></h1>
+            <ul>
+              <li><code>Bio.Applications</code>: <a href="http://cmpg.unibe.ch/software/fastsimcoal2/">fastsimcoal</a>, <a href="http://cmpg.unibe.ch/software/fastsimcoal2/">bwa</a>, and <a href="">samtools</a> support</li>
+              <li><code>Bio.Entrez</code> DTD caching</li>
+              <li><code>Bio.Restriction</code> enzyme list</li>
+              <li><code>Bio.SearchIO</code>, <code>Bio.Phylo</code>, and <code>Bio.motifs</code> format support</li>
+              <li style="margin-top: 1em;">More from yesterday's <a href="http://twitter.com/search?q=%23codefest">#codefest</a>: Brad's update tomorrow</li>
+            </ul>
+        </section>
 
-						For those of you who like that sort of thing. Instructions and a bit more info available [here](https://github.com/hakimel/reveal.js#markdown).
+        <section>
+          <h1>Streamlined Codebase <small>Biopython 1.63</small></h1>
+          <ul>
+            <li>Single codebase supporting Python 2, Python 3, PyPy, and Jython 2.7</li>
+            <li>Previously: <code>2to3.py</code></li>
+            <li>Had to drop Python 2.5 (consequently Jython 2.5) support</li>
+            <li>Documentation, tutorial, cookbook updated accordingly</li>
+          </ul>
+        </section>
 
-						```
-						<section data-markdown>
-						  ## Markdown support
+        <section>
+          <h1>Wider Availability</h1>
+          <ul>
+            <li>In the Galaxy ToolShed as a tool dependency</li>
+            <li>Version 1.61 onwards</li>
+          </ul>
+          <p style="margin-top: 1em;">
+            Dev repo: <a href="http://github.com/biopython/galaxy_packages">http://github.com/biopython/galaxy_packages</a>
+          </p>
+        </section>
 
-						  For those of you who like that sort of thing.
-						  Instructions and a bit more info available [here](https://github.com/hakimel/reveal.js#markdown).
-						</section>
-						```
-					</script>
-				</section>
+        <section>
+          <h1>GSoC 2014</h1>
+          <div style="width: 80%; margin: auto;">
+            <div style="float: left; width: 73%;">
+              <ul>
+                <li>Evan Parker, Chemistry PhD candidate
+                <li>Addition of lazy-parsing support for <code>Bio.SeqIO</code></li>
+                <li>Faster parsing for simple formats (e.g. FASTA) and complex, annotated formats (e.g. GenBank)</li>
+                <li><em>Mentors</em>: Peter Cock &amp; Wibowo Arindrarto</li>
+              </ul>
+            </div>
+            <div style="float: right;">
+              <img src="img/evan.jpg" style="border-radius: 10px; z-index: 10;" height="200px;">
+            </div>
+            <div style="float: left;">
+              <ul>
+                <li style="margin-top: 1em;">Blog: <a href="http://blog.evanaparker.com">http://blog.evanaparker.com</a></li>
+                <li>Dev repo: <a href="http://github.com/eparker05/biopython">http://github.com/eparker05/biopython</a></li>
+              </ul>
+            </div>
+          </div>
+        </section>
 
-				<section id="transitions">
-					<h2>Transition Styles</h2>
-					<p>
-						You can select from different transitions, like: <br>
-						<a href="?transition=cube#/transitions">Cube</a> -
-						<a href="?transition=page#/transitions">Page</a> -
-						<a href="?transition=concave#/transitions">Concave</a> -
-						<a href="?transition=zoom#/transitions">Zoom</a> -
-						<a href="?transition=linear#/transitions">Linear</a> -
-						<a href="?transition=fade#/transitions">Fade</a> -
-						<a href="?transition=none#/transitions">None</a> -
-						<a href="?#/transitions">Default</a>
-					</p>
-				</section>
+        <section>
+          <h1>Acknowledgement</h1>
+          <h5 style="margin-top: 20px; margin-bottom: 5px;">The Community</h5>
+          <p>contributors, users, testers, bug reporters, everybody involved</p>
+          <h5 style="margin-top: 30px; margin-bottom: 5px;">Infrastructure &amp; Other Support</h5>
+          <div>
+            <img src="img/obf.jpg" style="border-radius: 10px; margin-bottom: 0px;" height="80px" title="Open Bioinformatics Foundation" />
+            <img src="img/google.jpg" style="border-radius: 10px; margin-bottom: 0px;" height="80px" title="Google" />
+            <p>
+            <img src="img/github.jpg" style="border-radius: 10px; margin-top: 5px;" height="80px" title="GitHub" />
+            <img src="img/travis.jpg" style="border-radius: 10px; margin-top: 5px;" height="80px" title="Travis CI" />
+          </div>
+        </section>
 
-				<section id="themes">
-					<h2>Themes</h2>
-					<p>
-						Reveal.js comes with a few themes built in: <br>
-						<a href="?#/themes">Default</a> -
-						<a href="?theme=sky#/themes">Sky</a> -
-						<a href="?theme=beige#/themes">Beige</a> -
-						<a href="?theme=simple#/themes">Simple</a> -
-						<a href="?theme=serif#/themes">Serif</a> -
-						<a href="?theme=night#/themes">Night</a> <br>
-						<a href="?theme=moon#/themes">Moon</a> -
-						<a href="?theme=solarized#/themes">Solarized</a>
-					</p>
-					<p>
-						<small>
-							* Theme demos are loaded after the presentation which leads to flicker. In production you should load your theme in the <code>&lt;head&gt;</code> using a <code>&lt;link&gt;</code>.
-						</small>
-					</p>
-				</section>
+        <section>
+          <h1>I Thank ...</h1>
+            <div>
+              <img style="border-radius: 10px; margin-bottom: .1em; width: 25%;" src="img/lumc.jpg" />
+              <p>
+                <ul>Biopython lives in our:
+                  <li>In-house scripts and pipelines</li>
+                  <li>Released Python packages (available in the PyPI):
+                    <ul>
+                      <li><code><a href="http://pypi.python.org/pypi/kMer/0.2.0">kMer</a></code>: k-mer analysis toolkit</li>
+                      <li><code><a href="http://humgenprojects.lumc.nl/trac/humgenprojects/wiki/TSSV">tssv</a></code>: short structural variation analysis<br /><small>Anvar et al. (2014) DOI:10.1093/bioinformatics/btu068</small></li>
+                    </ul>
+                  </li>
+                  <li style="margin-top: -10px;">Mutalyzer web service: <a href="http://mutalyzer.nl/">http://mutalyzer.nl</a><br />an HGVS variant nomenclature checker
+                  </li>
+                </ul>
+              </p>
+            </div>
+        </section>
 
-				<section>
-					<h2>Global State</h2>
-					<p>
-						Set <code>data-state="something"</code> on a slide and <code>"something"</code>
-						will be added as a class to the document element when the slide is open. This lets you
-						apply broader style changes, like switching the background.
-					</p>
-				</section>
-
-				<section data-state="customevent">
-					<h2>Custom Events</h2>
-					<p>
-						Additionally custom events can be triggered on a per slide basis by binding to the <code>data-state</code> name.
-					</p>
-					<pre><code data-trim contenteditable style="font-size: 18px; margin-top: 20px;">
-Reveal.addEventListener( 'customevent', function() {
-	console.log( '"customevent" has fired' );
-} );
-					</code></pre>
-				</section>
-
-				<section>
-					<section data-background="#007777">
-						<h2>Slide Backgrounds</h2>
-						<p>
-							Set <code>data-background="#007777"</code> on a slide to change the full page background to the given color. All CSS color formats are supported.
-						</p>
-						<a href="#" class="image navigate-down">
-							<img width="178" height="238" src="https://s3.amazonaws.com/hakim-static/reveal-js/arrow.png" alt="Down arrow">
-						</a>
-					</section>
-					<section data-background="https://s3.amazonaws.com/hakim-static/reveal-js/arrow.png">
-						<h2>Image Backgrounds</h2>
-						<pre><code>&lt;section data-background="image.png"&gt;</code></pre>
-					</section>
-					<section data-background="https://s3.amazonaws.com/hakim-static/reveal-js/arrow.png" data-background-repeat="repeat" data-background-size="100px">
-						<h2>Repeated Image Backgrounds</h2>
-						<pre><code style="word-wrap: break-word;">&lt;section data-background="image.png" data-background-repeat="repeat" data-background-size="100px"&gt;</code></pre>
-					</section>
-				</section>
-
-				<section data-transition="linear" data-background="#4d7e65" data-background-transition="slide">
-					<h2>Background Transitions</h2>
-					<p>
-						Pass reveal.js the <code>backgroundTransition: 'slide'</code> config argument to make backgrounds slide rather than fade.
-					</p>
-				</section>
-
-				<section data-transition="linear" data-background="#8c4738" data-background-transition="slide">
-					<h2>Background Transition Override</h2>
-					<p>
-						You can override background transitions per slide by using <code>data-background-transition="slide"</code>.
-					</p>
-				</section>
-
-				<section>
-					<h2>Clever Quotes</h2>
-					<p>
-						These guys come in two forms, inline: <q cite="http://searchservervirtualization.techtarget.com/definition/Our-Favorite-Technology-Quotations">
-						&ldquo;The nice thing about standards is that there are so many to choose from&rdquo;</q> and block:
-					</p>
-					<blockquote cite="http://searchservervirtualization.techtarget.com/definition/Our-Favorite-Technology-Quotations">
-						&ldquo;For years there has been a theory that millions of monkeys typing at random on millions of typewriters would
-						reproduce the entire works of Shakespeare. The Internet has proven this theory to be untrue.&rdquo;
-					</blockquote>
-				</section>
-
-				<section>
-					<h2>Pretty Code</h2>
-					<pre><code data-trim contenteditable>
-function linkify( selector ) {
-  if( supports3DTransforms ) {
-
-    var nodes = document.querySelectorAll( selector );
-
-    for( var i = 0, len = nodes.length; i &lt; len; i++ ) {
-      var node = nodes[i];
-
-      if( !node.className ) {
-        node.className += ' roll';
-      }
-    }
-  }
-}
-					</code></pre>
-					<p>Courtesy of <a href="http://softwaremaniacs.org/soft/highlight/en/description/">highlight.js</a>.</p>
-				</section>
-
-				<section>
-					<h2>Intergalactic Interconnections</h2>
-					<p>
-						You can link between slides internally,
-						<a href="#/2/3">like this</a>.
-					</p>
-				</section>
-
-				<section>
-					<section id="fragments">
-						<h2>Fragmented Views</h2>
-						<p>Hit the next arrow...</p>
-						<p class="fragment">... to step through ...</p>
-						<ol>
-							<li class="fragment"><code>any type</code></li>
-							<li class="fragment"><em>of view</em></li>
-							<li class="fragment"><strong>fragments</strong></li>
-						</ol>
-
-						<aside class="notes">
-							This slide has fragments which are also stepped through in the notes window.
-						</aside>
-					</section>
-					<section>
-						<h2>Fragment Styles</h2>
-						<p>There's a few styles of fragments, like:</p>
-						<p class="fragment grow">grow</p>
-						<p class="fragment shrink">shrink</p>
-						<p class="fragment roll-in">roll-in</p>
-						<p class="fragment fade-out">fade-out</p>
-						<p class="fragment highlight-red">highlight-red</p>
-						<p class="fragment highlight-green">highlight-green</p>
-						<p class="fragment highlight-blue">highlight-blue</p>
-						<p class="fragment current-visible">current-visible</p>
-						<p class="fragment highlight-current-blue">highlight-current-blue</p>
-					</section>
-				</section>
-
-				<section>
-					<h2>Spectacular image!</h2>
-					<a class="image" href="http://lab.hakim.se/meny/" target="_blank">
-						<img width="320" height="299" src="http://s3.amazonaws.com/hakim-static/portfolio/images/meny.png" alt="Meny">
-					</a>
-				</section>
-
-				<section>
-					<h2>Export to PDF</h2>
-					<p>Presentations can be <a href="https://github.com/hakimel/reveal.js#pdf-export">exported to PDF</a>, below is an example that's been uploaded to SlideShare.</p>
-					<iframe id="slideshare" src="http://www.slideshare.net/slideshow/embed_code/13872948" width="455" height="356" style="margin:0;overflow:hidden;border:1px solid #CCC;border-width:1px 1px 0;margin-bottom:5px" allowfullscreen> </iframe>
-					<script>
-						document.getElementById('slideshare').attributeName = 'allowfullscreen';
-					</script>
-				</section>
-
-				<section>
-					<h2>Take a Moment</h2>
-					<p>
-						Press b or period on your keyboard to enter the 'paused' mode. This mode is helpful when you want to take distracting slides off the screen
-						during a presentation.
-					</p>
-				</section>
-
-				<section>
-					<h2>Stellar Links</h2>
-					<ul>
-						<li><a href="http://slid.es">Try the online editor</a></li>
-						<li><a href="https://github.com/hakimel/reveal.js">Source code on GitHub</a></li>
-						<li><a href="http://twitter.com/hakimel">Follow me on Twitter</a></li>
-					</ul>
-				</section>
-
-				<section>
-					<h1>THE END</h1>
-					<h3>BY Hakim El Hattab / hakim.se</h3>
-				</section>
+        <section>
+          <h1>Thank you!</h1>
+          <p style="margin-top: 1em;">Check us out:
+            <a href="http://biopython.org">http://biopython.org</a>
+          </p>
+          <p style="margin-top: 1em;">Code repository:
+            <ul>
+              <a href="http://github.com/biopython/biopython">http://github.com/biopython/biopython</a>
+            </ul>
+          </p>
+          <p style="margin-top: 1em;">Mailing list:
+            <ul>
+              <li>General list: <a href="mailto:biopython@biopython.org">biopython@biopython.org</a></li>
+              <li>Developers list: <a href="mailto:biopython-dev@biopython.org">biopython-dev@biopython.org</a></li>
+            </ul>
+          </p>
+          <p style="margin-top: 1em;">This presentation:
+            <a href="http://speakerdeck.com/bow/2014-bosc-biopython">http://speakerdeck.com/bow/2014-bosc-biopython</a>
+          </p>
+        </section>
 
 			</div>
-
+      <img id="logo-bottom-left" src="img/bosc.png" />
 		</div>
 
 		<script src="lib/js/head.min.js"></script>
@@ -365,17 +274,21 @@ function linkify( selector ) {
 			// Full list of configuration options available here:
 			// https://github.com/hakimel/reveal.js#configuration
 			Reveal.initialize({
+        width: 1366 * 0.8,
+        height: 768 * 0.6,
 				controls: true,
 				progress: true,
 				history: true,
 				center: true,
+        slideNumber: true,
+        previewLinks: true,
 
-				theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
-				transition: Reveal.getQueryHash().transition || 'default', // default/cube/page/concave/zoom/linear/fade/none
+				theme: 'night' || Reveal.getQueryHash().theme,
+				transition: Reveal.getQueryHash().transition || 'linear',
 
 				// Parallax scrolling
-				// parallaxBackgroundImage: 'https://s3.amazonaws.com/hakim-static/reveal-js/reveal-parallax-1.jpg',
-				// parallaxBackgroundSize: '2100px 900px',
+				parallaxBackgroundImage: 'img/bg.jpg',
+				parallaxBackgroundSize: '2170px 820px',
 
 				// Optional libraries used to extend on reveal.js
 				dependencies: [

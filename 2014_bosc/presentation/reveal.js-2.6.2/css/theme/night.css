@@ -10,6 +10,7 @@
  *********************************************/
 body {
   background: #111111;
+  background: url("../../img/bg.jpg");
   background-color: #111111; }
 
 .reveal {

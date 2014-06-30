@@ -1,0 +1,32 @@
+ul.flat {
+  margin-top: 1em;
+  margin-left: 0;
+  margin-bottom: 1em;
+}
+
+ul.flat li {
+  display: inline;
+  margin-left: .7em;
+}
+
+ul.flat li:first-child {
+  margin-left: 0;
+}
+
+.reveal .slides h1 { font-size: 2.5em; }
+.reveal .slides h2 { font-size: 1.875em; }
+.reveal .slides h3 { font-size: 1.4625em; }
+.reveal .slides h4 { font-size: 1.4em; }
+.reveal .slides h5 { font-size: 1.03em; }
+.reveal .slides h6 { font-size: .9375em; }
+
+#logo-bottom-left {
+  border-radius: 5px;
+  position: fixed;
+  width: 5%;
+  z-index: 30;
+  bottom: 30px;
+  left: 30px;
+}
+
+.lower { text-transform: lowercase; }
