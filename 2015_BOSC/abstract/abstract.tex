@@ -9,7 +9,7 @@
 \setlength{\headheight}{0in}
 \setlength{\headsep}{0in}
 \setlength{\parindent}{0.25in}
-%%%%%%%%%%%% 
+%%%%%%%%%%%%
 
 \usepackage[numbers]{natbib}
 \usepackage{graphicx}
@@ -19,7 +19,7 @@
 \vspace{-1.5in}
 \includegraphics[width=0.5\textwidth]{biopython.jpg}\\
 %Hack to get some white space using a blank line:
-~\\Biopython Project Update 2014}
+~\\Biopython Project Update 2015}
 \author{
     \underline{Jo\~{a}o Rodrigues}\footnote{Bijvoet Center for Biomolecular Research, Utrecht University, Utrecht, NL. Email: \href{mailto:j.rodrigues@uu.nl}{j.rodrigues@uu.nl}},
     Tiago Ant\~{a}o \footnote{Vector Biology Department, Liverpool School of Tropical Medicine, Pembroke Place, UK},
@@ -53,8 +53,9 @@ features include: extended Bio.KEGG and Bio.Graphics modules to support the
 KEGG REST API, as well as parsing, representing, and drawing KGML pathways; 
 inclusion of the new NCBI genetic code table 24 (Pterobranchia Mitochondrial) 
 and corresponding translation functionality in Bio.Data; improvements to 
-Bio.SeqIO (parse and index\_db methods) and Bio.SearchIO (QueryResults objects); 
-and refactoring and new functionality of Bio.SeqUtils.MeltingTemp. 
+Bio.SeqIO (parse and index\_db methods) and Bio.SearchIO (hit retrieval using alternative IDs); 
+and a rewritten Bio.SeqUtils.MeltingTemp with additional methods to calculate oligonucletide
+melting temperatures.
 Additionally, we continued our efforts to abide by the PEP8 coding style guidelines, 
 namely using lower case module names in new experimental modules.
 
@@ -62,11 +63,11 @@ We are currently preparing a new release - version 1.66 - that will contain
 further work on the Bio.KEGG and Bio.Graphics modules (support for transparency 
 in KGML pathways), extended support for the \"abi\" format in Bio.SeqIO, 
 miscellaneous improvements to the test suite, and further adherence to PEP8. In addition, 
-our participation in GSoC 2014 had Evan Parker adding lazy-parsing support for 
-Bio.SeqIO, which is currently under review and expected to be integrated soon.
+our participation in Google Summer of Code 2014 had Evan Parker adding lazy-parsing support for 
+Bio.SeqIO. The additions are currently under review and expected to be integrated soon.
 
 Finally, complementary to these developments, we created a new repository for Docker
-containers.  The included containers support both Python versions 2 
+containers. The included containers support both Python versions 2 
 \& 3 and install all of Biopython's dependencies. They are therefore useful for 
 development, but also for teaching due to the inclusion of IPython Notebooks.
 
