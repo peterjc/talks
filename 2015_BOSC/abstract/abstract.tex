@@ -1,0 +1,79 @@
+\documentclass[10pt,oneside]{article}
+
+%%%%%%%%%%%%%
+\setlength{\textheight}{8.75in} %Letter is 11in, less 2 for margins, less 0.25 for footer
+\setlength{\oddsidemargin}{0.0in} %gets +1inc
+\setlength{\evensidemargin}{0.0in} %gets +1inch
+\setlength{\textwidth}{6.50in} %Letter is 8.5, less 2 inches for margins
+\setlength{\topmargin}{0.5in}
+\setlength{\headheight}{0in}
+\setlength{\headsep}{0in}
+\setlength{\parindent}{0.25in}
+%%%%%%%%%%%% 
+
+\usepackage[numbers]{natbib}
+\usepackage{graphicx}
+\usepackage[colorlinks=true,citecolor=black,urlcolor=blue]{hyperref}
+
+\title{%Hack to get the logo on the PDF front page:
+\vspace{-1.5in}
+\includegraphics[width=0.5\textwidth]{biopython.jpg}\\
+%Hack to get some white space using a blank line:
+~\\Biopython Project Update 2014}
+\author{
+    \underline{Jo\~{a}o Rodrigues}\footnote{Bijvoet Center for Biomolecular Research, Utrecht University, Utrecht, NL. Email: \href{mailto:j.rodrigues@uu.nl}{j.rodrigues@uu.nl}},
+    Tiago Antao \footnote{Vector Biology Department, Liverpool School of Tropical Medicine, Pembroke Place, UK},
+    Peter Cock\footnote{Information and Computational Sciences, James Hutton Institute (formerly SCRI), Invergowrie, Dundee, UK},
+    Eric Talevich\footnote{Department of Dermatology, University of California San Francisco, San Francisco, CA, USA},
+    Michiel de Hoon\footnote{Division of Genomic Technologies, RIKEN Center for Life Science Technologies, Yokohama, JP},
+		\\
+    Wibowo Arindrarto\footnote{Sequencing Analysis Support Core, Leiden University Medical Center, Leiden, NL},
+    and the Biopython Contributors}
+\date{16\textsuperscript{th} Bioinformatics Open Source Conference (BOSC) 2015, Dublin, Ireland}
+
+\begin{document}
+%\pagestyle{empty}
+%\thispagestyle{empty}
+\maketitle
+%\pagestyle{empty}
+\thispagestyle{empty}
+
+\vspace{-0.2in}
+\noindent
+Website: \url{http://biopython.org} \\
+Repository: \url{https://github.com/biopython/biopython} \\
+License: Biopython License Agreement (MIT style, see \url{http://www.biopython.org/DIST/LICENSE}) \\
+
+The Biopython project is a long-running distributed collaborative effort, 
+supported by the Open Bioinformatics Foundation, which develops a freely 
+available Python library for biological computation \cite{AppNote}.
+
+We present here details of the recent Biopython release - version 1.65. New 
+features include: extended Bio.KEGG and Bio.Graphics modules to support the 
+KEGG REST API, as well as parsing, representing, and drawing KGML pathways; 
+inclusion of the new NCBI genetic code table 24 (Pterobranchia Mitochondrial) 
+and corresponding translation functionality to Bio.Data; improvements to 
+Bio.SeqIO (parse and index\_db methods) and Bio.SearchIO (QueryResults objects); 
+and refactoring and new functionality of Bio.SeqUtils.MeltingTemp. 
+Additionally, we continued our efforts to abide by the PEP8 coding styles, 
+namely using lower case module names in new experimental modules.
+
+We are currently preparing a new release - version 1.66 - that will contain 
+further work on the Bio.KEGG and Bio.Graphics modules (support for transparency 
+in KGML pathways), extended support for the \"abi\" format in Bio.SeqIO, and 
+miscellaneous improvements to the test suit and PEP8 coding style. In addition, 
+our participation in GSoC 2014 had Evan Parker adding lazy-parsing support for 
+Bio.SeqIO, which is currently under review and should be implemented soon.
+
+Finally, complementary to these developments, we created Docker containers and 
+added to our GitHub repository. These containers support both Python versions 2 
+\& 3 and install all of Biopython's dependencies. They are therefore useful for 
+development, but also for teaching due to the inclusion of IPython Notebooks.
+
+\begin{thebibliography}{}
+
+\bibitem[Cock {\it et al}., 2009]{AppNote}Cock, P.J.A., Antao, T., Chang, J.T., Chapman, B.A., Cox, C.J., Dalke, A., Friedberg, I., Hamelryck, T., Kauff, F., Wilczynski, B., de Hoon, M.J. (2009) Biopython: freely available Python tools for computational molecular biology and bioinformatics. {\it Bioinformatics} {\bf 25}(11) 1422-3. \href{http://dx.doi.org/10.1093/bioinformatics/btp163}{doi:10.1093/bioinformatics/btp163}
+
+\end{thebibliography}
+
+\end{document}

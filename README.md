@@ -1,4 +1,4 @@
-TALKS
-=====
+BOSC Biopython Talks
+====
 
-Stuff related to talks I give.
+Abstracts & Presentation Slides for Biopython project updates in BOSC
