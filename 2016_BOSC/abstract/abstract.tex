@@ -45,15 +45,35 @@ Website: \url{http://biopython.org} \\
 Repository: \url{https://github.com/biopython/biopython} \\
 License: Biopython License Agreement (MIT style, see \url{http://www.biopython.org/DIST/LICENSE}) \\
 
-The Biopython Project is a long-running distributed collaborative effort, supported by the Open Bioinformatics Foundation, which develops a freely available Python library for biological computation \cite{AppNote}.
+The Biopython Project is a long-running distributed collaborative effort,
+supported by the Open Bioinformatics Foundation, which develops a freely
+available Python library for biological computation \cite{AppNote}.
 
-We present here details of the latest Biopython release - version 1.66. New features include: extended Bio.KEGG and Bio.Graphics modules to support drawing KEGG pathways with transparency; extended the ``abi'' Bio.SeqIO parser to decode almost all documented fields used by ABIF instruments; added a QCPSuperimposer module using the Quaternion Characteristic Polynomial algorithm for superimposing structures to Bio.PDB; and extended the Bio.Entrez module to implement the NCBI Entrez Citation Matching function and to support NCBI XML files with XSD schemas.  Additionally we fixed miscellaneous bugs, enhanced our test suite and continued our efforts to abide by the PEP8 coding style guidelines.
+We present here details of the latest Biopython release - version 1.66. New
+features include: extended Bio.KEGG and Bio.Graphics modules to support drawing
+KEGG pathways with transparency; extended the ``abi'' Bio.SeqIO parser to decode
+almost all documented fields used by ABIF instruments; added a QCPSuperimposer
+module using the Quaternion Characteristic Polynomial algorithm for superimposing
+structures to Bio.PDB; and extended the Bio.Entrez module to implement the NCBI
+Entrez Citation Matching function and to support NCBI XML files with XSD schemas.
+Additionally we fixed miscellaneous bugs, enhanced our test suite and continued our
+efforts to abide by the PEP8 coding style guidelines.
 
-We are currently preparing a new release - version 1.67 - that will deprecate the ability to compare SeqRecord objects with "==", which sometimes lead to surprising results.  In addition it will feature updates to Bio.Data to include NCBI genetic code table 25, Candidate Division SR1 and Gracilibacteria; and updates to BioSQL to use foreign keys with SQLite3 databases.
+We are currently preparing a new release - version 1.67 - that will deprecate the
+ability to compare SeqRecord objects with "==", which sometimes lead to surprising
+results.  In addition it will feature updates to Bio.Data to include NCBI genetic
+code table 25, Candidate Division SR1 and Gracilibacteria; and updates to BioSQL to
+use foreign keys with SQLite3 databases.
 
-Our continuous integration process on GitHub has been enhanced by including external services services like Landscape, Quantified Code and Codecov to perform quality review, test coverage analysis and generation of quality metrics.
+Our continuous integration process on GitHub has been enhanced by including
+external services services like Landscape, Quantified Code and Codecov to perform
+quality review, test coverage analysis and generation of quality metrics.
 
-Finally, our range of Docker containers has been greatly enhanced. In addition to a basic containers that include Python 2 and 3 with Biopython and all its dependencies, as well as BioSQL container, we now also two versions of Jupyter notebook containers: a basic one, and a version including the Biopython tutorial as notebooks.
+Finally, our range of Docker containers has been greatly enhanced. In addition to
+a basic containers that include Python 2 and 3 with Biopython and all its
+dependencies, as well as BioSQL container, we now also two versions of Jupyter
+notebook containers: a basic one, and a version including the Biopython tutorial as
+notebooks.
 
 
 \begin{thebibliography}{}
