@@ -11,7 +11,7 @@
 \setlength{\parindent}{0.25in}
 %%%%%%%%%%%%
 
-% use letter instead of symbols to accomodate >7 authors
+% use letters instead of symbols to accomodate >7 authors
 \makeatletter
 \let\@fnsymbol\@alph
 \makeatother
@@ -22,9 +22,9 @@
 \usepackage[colorlinks=true,citecolor=black,urlcolor=blue]{hyperref}
 
 \title{%Hack to get the logo on the PDF front page:
-\includegraphics[width=0.5\textwidth]{biopython.jpg}\\
-%Hack to get some white space using a blank line:
-~\\Biopython Project Update 2016}
+\vspace{-1.5in}
+\includegraphics[width=0.4\textwidth]{biopython.jpg}\\
+\vspace{3mm}Biopython Project Update 2016}
 \author{
 	\underline{Christian Brueffer}\thanks{Department of Clinical Sciences, Lund University, Lund, SE. Email: \href{mailto:christian.brueffer@med.lu.se}{christian.brueffer@med.lu.se}},
     Tiago Ant\~{a}o\thanks{Division of Biological Sciences, University of Montana, Montana, USA},
@@ -68,7 +68,7 @@ Entrez Citation Matching function and to support NCBI XML files with XSD schemas
 Additionally we fixed miscellaneous bugs, enhanced our test suite and continued our
 efforts to abide by the PEP8 coding style guidelines.
 
-We are currently preparing a new release - version 1.67 - that will deprecate the
+We are currently preparing a new release -- version 1.67 -- that will deprecate the
 ability to compare SeqRecord objects with ``=='', which sometimes lead to surprising
 results.  In addition it will feature a new experimental Bio.phenotype module for
 working with Phenotype Microarray data; updates to Bio.Data to include NCBI genetic
