@@ -11,6 +11,12 @@
 \usepackage{textpos}
 \usepackage{textcomp}
 \usepackage{floatrow}
+\usepackage{hyperref}
+\hypersetup{
+  colorlinks=true,
+  linkcolor=black,
+  urlcolor=blue
+}
 \graphicspath{{figures/}}
 
 \title{
@@ -18,7 +24,7 @@
   Biopython Project Update 2016}
 \subtitle{}
 \author{
-  \underline{Christian Brueffer}*, Tiago Ant\~{a}o, Peter Cock, Eric Talevich,\\
+  \textbf{Christian Brueffer}*, Tiago Ant\~{a}o, Peter Cock, Eric Talevich,\\
   Michiel de Hoon, Wibowo Arindrarto, Leighton Pritchard,\\
   Anuj Sharma, Eric Rasche, Aaron Rosenfeld, Connor T.\\
   Skennerton, Marco Galardini, Markus Piotrowski,\\
@@ -67,12 +73,13 @@
 
   \begin{itemize}
   \item Collection of modules for biological computation in Python
+  \item First release in 2000
   \item Open source and freely available (Biopython license)
   \end{itemize}
 }
 \frame
 {
-  \frametitle{Blackduck OpenHub Stats}
+  \frametitle{Blackduck OpenHUB Stats}
 
 }
 
@@ -84,11 +91,48 @@
 {
   \frametitle{New stuff in 1.66}
 
+  \begin{itemize}
+  \item extended Bio.KEGG and Bio.Graphics modules to support drawing KEGG pathways with transparency
+  \item extended "abi" Bio.SeqIO parser to decode almost all documented fields used by ABIF instruments
+  \item QCPSuper-imposer module using the Quaternion Characteristic Polynomial algorithm for superimposing structures to Bio.PDB
+  \item extended Bio.Entrez module to implement the NCBI Entrez Citation Matching function and to support NCBI XML files with XSD schemas.
+  \item miscellaneous bug fixes, enhanced test suite, better PEP8 coding style adherence
+  \end{itemize}
 }
 \subsection*{Release 1.67}
 \frame
 {
   \frametitle{New Stuff in 1.67}
+
+  \begin{itemize}
+  \item deprecate the ability to compare SeqRecord objects with "==" -- sometimes lead to surprising results
+  \item new experimental Bio.phenotype module for working with Phenotype Microarray data updates to Bio.Data to include NCBI genetic code table 25, covering Candidate Division SR1 and Gracilibacteria
+  \item update to Bio.Restriction to include the REBASE May 2016 restriction enzyme list
+  \item updates to BioSQL to use foreign keys with SQLite3 databases
+  \item corrections to the Bio.Entrez module and the MMCIF structure parser
+  \item XXX include updates since end of May!
+  \end{itemize}
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Docker Images}
+\frame
+{
+  \frametitle{Docker Images}
+
+  \begin{itemize}
+  \item Previously existing containers:
+    \begin{itemize}
+    \item basic container with Python 2 and 3, Biopython and all its dependencies
+    \item BioSQL container
+  \end{itemize}
+  \item New: Jupyter notebook containers
+    \begin{itemize}
+      \item basic
+      \item including Biopython tutorial as notebooks
+    \end{itemize}
+  \end{itemize}
 }
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -96,8 +140,12 @@
 \section{General Updates}
 \frame
 {
-  \frametitle{foo}
+  \frametitle{Website}
 
+Our website has been migrated from MediaWiki to GitHub Pages and is now under version control. The
+continuous integration process on GitHub has been enhanced by including external services like Landscape,
+Quantified Code and Codecov to perform quality review, test coverage analysis and generation of quality
+metrics.
 }
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -115,23 +163,34 @@
 \section*{Acknowledgements}
 \frame
 {
-  \frametitle{Acknowledgements}
+  \frametitle{Thanks to...}
 
   \begin{itemize}
-  \item Lao Saal (PhD supervisor)
-  \item Lund University Faculty of Medicine (PhD Student Travel Grant)
   \item Peter Cock
   \item Biopython Community
+  \item Lao Saal (PhD supervisor)
+  \item Lund University Faculty of Medicine (PhD Student Travel Grant)
   \end{itemize}
 }
 
 \frame
 {
+  \frametitle{Find us here!}
+
   \begin{center}
-  \includegraphics[height=.2\textheight]{../abstract/biopython.jpg}\\
-   {\Huge Thank you for your attention!\\}  
-  \vspace{1cm}
-  {\Huge Questions?}  
+  Website:\\
+  \url{http://biopython.org}\\
+  Main code repository:\\
+  \url{http://github.com/biopython/biopython}
+
+  Mailing lists:
+
+  \begin{itemize}
+  \item General list: \url{biopython@biopython.org}
+  \item Developers list: \url{biopython-dev@biopython.org}
+  \end{itemize}
+
+  \includegraphics[height=.2\textheight]{../abstract/biopython.jpg}
   \end{center}
 }
 
