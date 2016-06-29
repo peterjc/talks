@@ -1,0 +1,109 @@
+% Copyright 2003 by Till Tantau   <tantau@users.sourceforge.net>
+%       and 2009 by Florian Hug   <florian@eit.lth.se>
+%
+% This program can be redistributed and/or modified under the terms
+% of the GNU Public License, version 2.
+% Inspired by the Frédéric Haziza <daz@it.uu.se>
+\ProvidesPackage{beamerthemeeit}[2009/03/12]
+
+\RequirePackage[absolute,overlay]{textpos}
+\RequirePackage{calc}
+
+\usecolortheme{eit}
+\usefonttheme{eit}
+
+\mode
+<all>
+
+\setbeamertemplate{sections/subsections in toc}[circle]
+
+%% ----------------------------------------------------------------------
+%% Title page
+%% ----------------------------------------------------------------------
+\defbeamertemplate*{title page}{eit theme}
+{%
+	% staven
+	\begin{textblock}{1}[0,0](0, 0)%
+			\pgfimage[width=0.1\paperwidth]{eitimages/staven}%
+	\end{textblock}%
+	% ellipses
+	\begin{textblock}{1}[0,1](0, \paperheight \divide \TPVertModule)%
+			\pgfimage[width=\paperwidth]{eitimages/ellipses}%
+	\end{textblock}%
+	\vfill%
+  \center%
+  %% Title
+  {\usebeamerfont{title}\usebeamercolor[fg]{title}\inserttitle\par}%
+  {%% Subtitle
+    \ifx\insertsubtitle\@empty%
+    \else%
+    \usebeamerfont{subtitle}\usebeamercolor[fg]{subtitle}\insertsubtitle%\par
+    \fi%  
+  }   
+  \vskip 5mm
+  %% Author
+  {\usebeamercolor{author}\usebeamerfont{author}\insertauthor}
+  \vskip 5mm
+  %% Institute
+  {\usebeamercolor{institute}\usebeamerfont{institute}\insertinstitute}
+  \vfill%
+}
+
+%% ----------------------------------------------------------------------
+%% Footer on Title page
+%% ----------------------------------------------------------------------
+\defbeamertemplate*{footline}{title slide}
+{
+	\leavevmode%
+  \hbox{%
+	\begin{beamercolorbox}[wd=\paperwidth,ht=4ex,right]{author in head/foot}%
+    \usebeamerfont{author in head/foot}\insertdate\hspace*{2em}\vspace{1ex}
+  \end{beamercolorbox}%
+	}%
+}
+%% ----------------------------------------------------------------------
+%% Footer on Normal page
+%% ----------------------------------------------------------------------
+\defbeamertemplate*{footline}{body}
+{
+  \leavevmode%
+  {\usebeamercolor[fg]{frametitleline}\hrule width \textwidth}%
+	\begin{beamercolorbox}[wd=\paperwidth,ht=5ex,left]{author in head/foot}%
+    \usebeamerfont{author in head/foot}\hspace*{2em}\insertshortauthor, \insertshortinstitute\vspace{1ex}
+  \end{beamercolorbox}%
+	\begin{textblock}{10ex \divide \TPHorizModule}[1,1](\paperwidth \divide \TPHorizModule, \paperheight \divide \TPVertModule)%
+		\pgfimage[height=5ex]{eitimages/boxes}%
+	\end{textblock}%
+}
+
+%% ----------------------------------------------------------------------
+%% Frame Title
+%% ----------------------------------------------------------------------
+\defbeamertemplate*{frametitle}{uu theme}[1][center]{%
+%
+  \ifbeamercolorempty[bg]{frametitle}{}{\nointerlineskip}%
+  \@tempdima=\textwidth%
+  \advance\@tempdima by\beamer@leftmargin%
+  \advance\@tempdima by\beamer@rightmargin%
+%  
+  \begin{beamercolorbox}[sep=0.3cm,#1,wd=\the\@tempdima]{frametitle}%
+    \usebeamerfont{frametitle}%
+    \vbox{}\vskip-1ex%
+    \strut\insertframetitle\strut\par%
+    {%
+      \ifx\insertframesubtitle\@empty%
+      \else%
+      {\usebeamerfont{framesubtitle}\usebeamercolor[fg]{framesubtitle}\insertframesubtitle\strut\par}%
+      \fi%
+    }%
+  \end{beamercolorbox}%
+  %
+  %% Adding the bar only if there is a title
+  \ifx\insertframetitle\@empty%
+  \else%
+  {\usebeamercolor[fg]{frametitleline}\vspace{-2mm}\hrule width \textwidth}%
+  \fi%
+}
+
+%% start with title page footer
+\setbeamertemplate{footline}[title slide]

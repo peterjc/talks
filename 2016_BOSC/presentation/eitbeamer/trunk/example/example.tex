@@ -1,0 +1,145 @@
+\documentclass[trans]{beamer}
+\usetheme{eit}
+
+%%
+%% Packages
+%%
+\usepackage{amsmath,color}
+\usepackage{graphicx}
+\usepackage{url}
+\usepackage{textpos}
+\graphicspath{{figures/}}
+
+%%
+%% Basic instructions
+%%
+\title[eit beamer template]{eit beamer template}
+\author{Author}
+\institute[Department of Electrical and Information Technology, Lund University, Sweden]{Department of Electrical and Information Technology\\Lund University}
+
+%% Only sections and subsections in toc
+\setcounter{tocdepth}{2}
+
+% Comment out this, if you do not want the table of contents to pop up at
+% the beginning of each (sub)section:
+\AtBeginSection[]
+{
+  \begin{frame} % with <beamer> => doesn't appear in handout mode
+    \frametitle{Outline} %% Put the title you want, or none!
+    \tableofcontents[currentsection,currentsection]
+  \end{frame}
+}
+
+\begin{document}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}
+	\titlepage
+\end{frame}
+\setbeamertemplate{footline}[body]
+
+\begin{frame}
+    \frametitle{Outline}
+    \tableofcontents
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Itemize And Enumerate}
+\begin{frame}
+	\frametitle{Lorem ipsum dolor sit amet}
+	
+	\textbf{consectetur adipisicing elit}
+	\begin{itemize}
+		\item Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+		\item Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
+		\item Duis aute irure dolor in reprehenderit 
+		\begin{itemize}
+			\item in voluptate velit esse cillum 
+			\item dolore eu fugiat nulla pariatur. 
+		\end{itemize}
+		\item Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+	\end{itemize}
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}
+	\frametitle{Lorem ipsum dolor sit amet}
+	
+	\textbf{consectetur adipisicing elit}
+	\begin{enumerate}
+		\item Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+		\item Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
+		\item Duis aute irure dolor in reprehenderit 
+		\begin{enumerate}
+			\item in voluptate velit esse cillum 
+			\item dolore eu fugiat nulla pariatur. 
+		\end{enumerate}
+		\item Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+	\end{enumerate}
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Equations}
+\begin{frame}
+	\frametitle{Ut enim ad minim veniam}
+	\framesubtitle{quis nostrud exercitation ullamco laboris}
+
+	\begin{equation*}
+		\begin{gathered}
+			\text{Minimize $f(x)$ among all $x$ such that} \\
+			\begin{aligned}
+				g_i(x) &= 0	&&\text{$i = 1$, \dots, $n_\text{eq}$}\\
+				h_i(x) &\geq 0	&&\text{$i = 1$, \dots, $n_\text{ineq}$}\\
+				l_i \leq x_i &\leq u_i &&\text{for some $i$'s}
+			\end{aligned} \\
+			\text{where $f, g_i, h_i:\mathbb{R}^{\!n}\rightarrow\mathbb{R}$}
+		\end{gathered}
+	\end{equation*}
+	\medskip
+	\textbf{Terminology}:
+	\begin{tabular}{ll}
+		$f$ & objective function\\
+		$x$ & decision variables\\
+		$g_i(x)= 0$	 & equality constraints\\
+		$h_i(x)\geq 0$ & inequality constraints\\
+		$l_i \leq x_i \leq u_i$		& box constraint (special case of inequality constraint)\\
+	\end{tabular}
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Boxes}
+\subsection{Theorem}
+\begin{frame}
+	\frametitle{Lorem ipsum dolor sit amet}
+
+	Lorem \alert{ipsum dolor sit amet}, consectetur adipisicing elit, sed do eiusmod \alert{tempor incididunt ut labore} et dolore magna aliqua. Ut enim ad minim veniam, \alert{quis nostrud exercitation ullamco laboris} nisi ut aliquip ex ea commodo consequat. 
+	\medskip
+	\begin{theorem}
+		Duis aute irure \alert{dolor in reprehenderit in voluptate} velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+	\end{theorem}
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Alert and Example}
+\begin{frame}
+	\frametitle{Lorem ipsum dolor sit amet}
+	\framesubtitle{quis nostrud exercitation ullamco laboris}
+	
+	\begin{alertblock}{Lorem...}
+	Lorem \alert{ipsum dolor sit amet}, consectetur adipisicing elit, sed do eiusmod \alert{tempor incididunt ut labore} et dolore magna aliqua. Ut enim ad minim veniam, \alert{quis nostrud exercitation ullamco laboris} nisi ut aliquip ex ea commodo consequat. 
+	\end{alertblock}
+	\medskip
+	\begin{example}
+		Duis aute irure \alert{dolor in reprehenderit in voluptate} velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+	\end{example}
+\end{frame}
+
+\section{Ordinary Text}
+\begin{frame}
+	\frametitle{Ut enim ad minim veniam}
+	\framesubtitle{quis nostrud exercitation ullamco laboris}
+
+	Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+\end{frame}
+
+\end{document}
