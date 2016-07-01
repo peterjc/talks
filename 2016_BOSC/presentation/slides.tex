@@ -6,7 +6,7 @@
 %\pgfpagesuselayout{4 on 1}[a4paper,landscape,border shrink=5mm]
 %\pgfpagesuselayout{2 on 1}[a4paper,border shrink=5mm]
 
-\usepackage[latin1]{inputenc}
+\usepackage[utf8]{inputenc}
 \usepackage{graphicx}
 \usepackage{textpos}
 \usepackage{textcomp}
@@ -23,13 +23,13 @@
   \includegraphics[height=.2\textheight]{../abstract/biopython.jpg}\\[1em]
   Biopython Project Update 2016}
 \subtitle{}
-\author{
+\author[Christian Brueffer]{
   \textbf{Christian Brueffer}*, Tiago Ant\~{a}o, Peter Cock, Eric Talevich,\\
   Michiel de Hoon, Wibowo Arindrarto, Leighton Pritchard,\\
   Anuj Sharma, Eric Rasche, Aaron Rosenfeld, Connor T.\\
   Skennerton, Marco Galardini, Markus Piotrowski,\\
   and the Biopython Contributors}
-\institute[Translational Oncogenomics Unit, Department of Clinical Sciences, Lund University]{* Translational Oncogenomics Unit\\Department of Clinical Sciences \\
+\institute[Translational Oncogenomics Unit, Department of Clinical Sciences, Lund University]{* Twitter \& GitHub: @cbrueffer\\Translational Oncogenomics Unit\\Department of Clinical Sciences \\
   Lund University\\
   Sweden\\[1em]
   Bioinformatics Open Source Conference 2016, Orlando, USA \\[1em]
@@ -82,34 +82,55 @@
   \frametitle{Blackduck OpenHUB Stats}
 
 }
+\frame
+{
+  \frametitle{Lots of new contributors!}
+% 1.66
+  Alan Medlar, Anthony Mathelier, Antony Lee, Anuj Sharma, Ben Fulton, Bertrand Néron, Connor T. Skennerton, David Arenillas, David Nicholson, Emmanuel Noutahi, Eric Rasche, Fabio Madeira, Franco Caramia, Gert Hulselmans, Gleb Kuznetsov, John Bradley, Kian Ho, Kozo Nishida, Kuan-Yi Li, Sunhwan Jo, Tarcisio Fedrizzi,
+
+%1.67
+  Aaron Rosenfeld, Anders Pitman, Barbara Mühlemann, Ben Woodcroft, Brian Osborne, Chaitanya Gupta, Chris Warth, Christiam Camacho, David Koppstein, Jacek Śmietański, João D Ferreira, Joe Cora, Marco Galardini, Matt Ruffalo, Matteo Sticco, Nader Morshed, Owen Solberg, Steve Bond, Terry Jones,
+
+% after
+  Anthony Bradle, Uwe Schmitt
+}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\section{Releases}
+\section{New Releases and Beyond}
 \subsection*{Release 1.66}
 \frame
 {
-  \frametitle{New stuff in 1.66}
+  \frametitle{Biopython 1.66 (released 2015-10-21)}
 
   \begin{itemize}
   \item extended Bio.KEGG and Bio.Graphics modules to support drawing KEGG pathways with transparency
-  \item extended "abi" Bio.SeqIO parser to decode almost all documented fields used by ABIF instruments
-  \item QCPSuper-imposer module using the Quaternion Characteristic Polynomial algorithm for superimposing structures to Bio.PDB
+  \item extended ``abi'' Bio.SeqIO parser to decode almost all documented fields used by ABIF instruments
+  \item QCPSuperimposer module using the Quaternion Characteristic Polynomial algorithm for superimposing structures to Bio.PDB
   \item extended Bio.Entrez module to implement the NCBI Entrez Citation Matching function and to support NCBI XML files with XSD schemas.
-  \item miscellaneous bug fixes, enhanced test suite, better PEP8 coding style adherence
+  \item miscellaneous bug fixes, test suite enhancement, better PEP8 coding style adherence
   \end{itemize}
 }
 \subsection*{Release 1.67}
 \frame
 {
-  \frametitle{New Stuff in 1.67}
+  \frametitle{Biopython 1.67 (released 2016-06-08)}
 
   \begin{itemize}
-  \item deprecate the ability to compare SeqRecord objects with "==" -- sometimes lead to surprising results
-  \item new experimental Bio.phenotype module for working with Phenotype Microarray data updates to Bio.Data to include NCBI genetic code table 25, covering Candidate Division SR1 and Gracilibacteria
+  \item deprecated ``=='' SeqRecord comparison
+  \item Bio.phenotype module for working with Phenotype Microarray data
+  \item updates to Bio.Data to include NCBI genetic code table 25 (covering Candidate Division SR1 and Gracilibacteria)
   \item update to Bio.Restriction to include the REBASE May 2016 restriction enzyme list
   \item updates to BioSQL to use foreign keys with SQLite3 databases
   \item corrections to the Bio.Entrez module and the MMCIF structure parser
+  \end{itemize}
+}
+\subsection*{Current Developments}
+\frame
+{
+  \frametitle{Current Developments}
+
+  \begin{itemize}
   \item XXX include updates since end of May!
   \end{itemize}
 }
@@ -124,13 +145,13 @@
   \begin{itemize}
   \item Previously existing containers:
     \begin{itemize}
-    \item basic container with Python 2 and 3, Biopython and all its dependencies
+    \item container with Python 2/3, Biopython and all dependencies
     \item BioSQL container
   \end{itemize}
   \item New: Jupyter notebook containers
     \begin{itemize}
-      \item basic
-      \item including Biopython tutorial as notebooks
+      \item basic version
+      \item version including Biopython tutorial as notebooks
     \end{itemize}
   \end{itemize}
 }
@@ -142,10 +163,12 @@
 {
   \frametitle{Website}
 
-Our website has been migrated from MediaWiki to GitHub Pages and is now under version control. The
-continuous integration process on GitHub has been enhanced by including external services like Landscape,
-Quantified Code and Codecov to perform quality review, test coverage analysis and generation of quality
-metrics.
+  \begin{itemize}
+  \item Previously hosted by OBF until server failure
+  \item Migrated from OBF MediaWiki to GitHub Pages and Jekyll
+  \item Repository: \url{https://github.com/biopython/biopython.github.io}
+  \item Continuous integration: added Landscape.io, Quantified Code and Codecov
+  \end{itemize}
 }
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -165,32 +188,42 @@ metrics.
 {
   \frametitle{Thanks to...}
 
+  Biopython
+
   \begin{itemize}
   \item Peter Cock
   \item Biopython Community
+  \end{itemize}
+
+  Lund University
+
+  \begin{itemize}
   \item Lao Saal (PhD supervisor)
-  \item Lund University Faculty of Medicine (PhD Student Travel Grant)
+  \item Faculty of Medicine (Travel Grant)
   \end{itemize}
 }
 
 \frame
 {
-  \frametitle{Find us here!}
+  \frametitle{Resources!}
 
   \begin{center}
   Website:\\
-  \url{http://biopython.org}\\
-  Main code repository:\\
-  \url{http://github.com/biopython/biopython}
+  \begin{itemize}
+  \item \url{http://biopython.org}
+  \end{itemize}
+
+  Repositories:\\
+  \begin{itemize}
+  \item Main: \url{http://github.com/biopython/biopython}
+  \item Docker: \url{http://github.com/biopython/biopython_docker}
+  \end{itemize}
 
   Mailing lists:
-
   \begin{itemize}
   \item General list: \url{biopython@biopython.org}
   \item Developers list: \url{biopython-dev@biopython.org}
   \end{itemize}
-
-  \includegraphics[height=.2\textheight]{../abstract/biopython.jpg}
   \end{center}
 }
 
