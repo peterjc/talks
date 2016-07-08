@@ -147,7 +147,7 @@
   \item Terry Jones
 
   % after
-  \item Anthony Bradle
+  \item Anthony Bradley
   \item Uwe Schmitt
   \end{itemize}
   \end{multicols}
@@ -163,14 +163,68 @@
   \frametitle{Biopython 1.66 (released 2015-10-21)}
 
   \begin{itemize}
-  \item extended Bio.KEGG and Bio.Graphics modules to support drawing KEGG pathways with transparency (Leighton Pritchard)
-  \item extended ``abi'' Bio.SeqIO parser to decode almost all documented fields used by ABIF instruments (Eric Rasche)
-  \item QCPSuperimposer module using the Quaternion Characteristic Polynomial algorithm for superimposing structures to Bio.PDB (Anuj Sharma)
-  \item extended Bio.Entrez module to implement the NCBI Entrez Citation Matching function and to support NCBI XML files with XSD schemas (Aaron Rosenfeld)
-  \item miscellaneous bug fixes, test suite enhancement, better PEP8 coding style adherence
+  \item miscellaneous bug fixes
+  \item test suite enhancement
+  \item better PEP8 coding style adherence
   \item Python 2.6 support deprecated
   \end{itemize}
 }
+
+\frame
+{
+  \frametitle{Extended KEGG Plotting}
+  
+  \begin{itemize}
+  \item Bio.KEGG and Bio.Graphics support transparency (Leighton Pritchard)
+  \item \url{http://nbviewer.jupyter.org/github/widdowquinn/notebooks/blob/master/Biopython_KGML_intro.ipynb}
+  \end{itemize}
+  
+  \begin{center}
+  \includegraphics[width=1\textwidth]{kegg-ko0100.pdf}
+  \end{center}
+}
+
+\frame
+{
+  \frametitle{Bio.SeqIO}
+  
+  \begin{itemize}
+  \item Bio.SeqIO: Sequence input/output as SeqRecord objects  
+  \item Extended ``abi'' Bio.SeqIO parser (Eric Rasche)
+  \begin{itemize}
+  \item Now decodes almost all documented fields used by ABIF instruments
+  \end{itemize}
+  \end{itemize}
+}
+
+\frame
+{
+  \frametitle{Bio.PDB}
+  
+  \begin{itemize}
+  \item Bio.PDB: Classes that deal with macromolecular crystal structures  
+  \item New QCPSuperimposer module (Anuj Sharma)
+  \begin{itemize}
+  \item Additional option for superimposing structures
+  \item Uses Quaternion Characteristic Polynomial algorithm
+  \end{itemize}
+  \end{itemize}
+}
+
+\frame
+{
+  \frametitle{Bio.Entrez}
+  
+  \begin{itemize}
+  \item Bio.Entrez: Provides code to access NCBI over the WWW
+  \item Better support for querying NCBI (Aaron Rosenfeld)
+  \begin{itemize}
+  \item Implement the NCBI Entrez Citation Matching function
+  \item Support for NCBI XML files with XSD schemas
+  \end{itemize}
+  \end{itemize}  
+}
+
 \frame
 {
   \frametitle{Biopython 1.66 Contributors}
@@ -222,16 +276,79 @@
   \frametitle{Biopython 1.67 (released 2016-06-08)}
 
   \begin{itemize}
-  \item deprecated ``=='' SeqRecord comparison (David Koppstein)
-  \item Bio.phenotype module for working with Phenotype Microarray data (Marco Galardini)
-  \item updates to Bio.Data to include NCBI genetic code table 25 (covering Candidate Division SR1 and Gracilibacteria)
-  \item update to Bio.Restriction to include the REBASE May 2016 restriction enzyme list (Markus Piotrowski)
-  \item updates to BioSQL to use foreign keys with SQLite3 databases (Connor T. Skennerton)
   \item corrections to the Bio.Entrez module (Aaron Rosenfeld)
-  \item corrections to the MMCIF structure parser
+  \item corrections to the MMCIF structure parser (João Rodrigues)
+  \item test suite improvements
+  \item PEP8!
   \item Python 3.3 support deprecated
   \end{itemize}
 }
+
+\frame
+{
+  \frametitle{SeqRecord Class}
+  
+  \begin{itemize}
+  \item deprecated ``=='' SeqRecord comparison (David Koppstein)
+  \end{itemize}
+}
+
+\frame
+{
+  \frametitle{Bio.phenotype}
+  
+  \begin{itemize}
+  \item Bio.phenotype: New module! (Marco Galardini)
+  \item Support for working with Phenotype microarray data
+  \item Parsing and analysis of cell culture growth measurements
+  \begin{itemize}
+  \item Data access (raw and interpolated)
+  \item Curve fitting
+  \item Parameter extraction
+  \end{itemize}
+  \item PlateRecord objects can be written as JSON (compatible with opm and DuctApe)
+  \end{itemize}
+}
+
+\frame
+{
+  \frametitle{Bio.Restriction}
+  
+  \begin{itemize}
+  \item Bio.Restriction: 
+  \item REBASE May 2016 restriction enzyme list (Markus Piotrowski)
+  \end{itemize}
+}
+
+\frame
+{
+  \frametitle{Bio.Data}
+  
+  \begin{itemize}
+  \item Bio.Data: Collections of useful biological data (codon tables, alphabets, etc)
+  \item Inclusion of NCBI genetic code table 25
+  \begin{itemize}
+  \item Candidate Division SR1
+  \item Gracilibacteria
+  \end{itemize}
+  \end{itemize}
+}
+
+\frame
+{
+  \frametitle{BioSQL}
+  
+  \begin{itemize}
+  \item updates to BioSQL to use foreign keys with SQLite3 databases (Connor T. Skennerton)
+  \end{itemize}
+
+}
+
+\frame
+{
+  \frametitle{foo}
+}
+
 \frame
 {
   \frametitle{Biopython 1.67 Contributors}
@@ -283,7 +400,7 @@
 
   \begin{itemize}
   \item Bio.PDB extended to parse the RSSB's new binary Macromolecular
-Transmission Format (MMTF) Anthony Bradle -> Poster 22
+Transmission Format (MMTF) Anthony Bradley -> Posters 21+22
 
   \item Module Bio.pairwise2 has been re-written (faster, addresses some problems with local alignments, and also now allows gap insertions after deletions, and vice versa) -> Markus Piotrowski
 
@@ -293,14 +410,24 @@ allows simple nucleotide transcription, back-transcription and translation
 into amino acids using Bio.Seq internally, offering of the NCBI genetic codes
 supported in Biopython. -> Markus Piotrowski
 
-  \item New NCBI genetic code table 26 (Pachysolen tannophilus Nuclear Code) has been
-added to Bio.Data (and the translation functionality)
-
   \item In line with NCBI website changes, Biopython now uses HTTPS rather than HTTP
 to connect to the NCBI Entrez and QBLAST API. (Peter Cock)
 
   \item Bug fixes, further additions to the test suite, more Python PEP8 style adherence
 
+  \end{itemize}
+}
+
+\frame
+{
+  \frametitle{Bio.Data}
+  
+  \begin{itemize}
+  \item Bio.Data: Collections of useful biological data
+  \item Inclusion of NCBI genetic code table 26
+  \begin{itemize}
+  \item Pachysolen tannophilus Nuclear Code
+  \end{itemize}
   \end{itemize}
 }
 
@@ -327,6 +454,18 @@ to connect to the NCBI Entrez and QBLAST API. (Peter Cock)
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
+\frame
+{
+  \frametitle{PEP8 Style}
+  
+  \begin{itemize}
+  \item Previously, widely different coding style in different modules
+  \item Large cleanup effort since 2012
+  \item Git pre-commit hook (\url{https://github.com/cbrueffer/pep8-git-hook})
+  \item Automatic style checking through TravisCI in preparation
+  \end{itemize}
+}
+
 \section{General Updates}
 \frame
 {
@@ -337,7 +476,7 @@ to connect to the NCBI Entrez and QBLAST API. (Peter Cock)
   \item Experimentation of different services
   \begin{itemize}
   \item Codecov.io (test coverage)
-  \item Quantified Code (automatic pull requests with Cody)
+  \item Quantified Code (metrics and automatic pull requests)
   \item Landscape.io (``health score'')
   \end{itemize}
   \item Currently enabled by default: CodeCov.io
@@ -444,14 +583,16 @@ to connect to the NCBI Entrez and QBLAST API. (Peter Cock)
   
   \begin{minipage}{1\textwidth}
   \begin{columns}
-  \column{0.25\textwidth}
+  \column{0.2\textwidth}
   \includegraphics[width=0.5\textwidth]{github-logo.jpg}
-  \column{0.25\textwidth}
+  \column{0.2\textwidth}
   \includegraphics[width=0.5\textwidth]{travisci-logo.png}
-  \column{0.25\textwidth}
+  \column{0.2\textwidth}
   \includegraphics[width=0.5\textwidth]{codecov-logo.png}
-  \column{0.25\textwidth}
+  \column{0.2\textwidth}
   \includegraphics[width=0.5\textwidth]{quantifiedcode-logo.png}
+  \column{0.2\textwidth}
+  \includegraphics[width=0.5\textwidth]{obf-logo.png}
   \end{columns}
   \end{minipage}
 }
