@@ -82,7 +82,7 @@
   \end{itemize}
 
   \begin{center}
-  \includegraphics[width=0.9\textwidth]{openhub-bp-nutshell.png}
+  \includegraphics[width=1\textwidth]{openhub-bp-nutshell.png}
   \end{center}
   \small{Source: \url{https://www.openhub.net/p/biopython}}
 }
@@ -160,14 +160,7 @@
 \subsection*{Release 1.66}
 \frame
 {
-  \frametitle{Biopython 1.66 (released 2015-10-21)}
-
-  \begin{itemize}
-  \item miscellaneous bug fixes
-  \item test suite enhancement
-  \item better PEP8 coding style adherence
-  \item Python 2.6 support deprecated
-  \end{itemize}
+  \center{\LARGE Biopython 1.66 (released 2015-10-21)}
 }
 
 \frame
@@ -192,6 +185,7 @@
   \item Bio.SeqIO: Sequence input/output as SeqRecord objects  
   \item Extended ``abi'' Bio.SeqIO parser (Eric Rasche)
   \begin{itemize}
+  \item appliedbiosystems ABIF format
   \item Now decodes almost all documented fields used by ABIF instruments
   \end{itemize}
   \end{itemize}
@@ -223,6 +217,18 @@
   \item Support for NCBI XML files with XSD schemas
   \end{itemize}
   \end{itemize}  
+}
+
+\frame
+{
+  \frametitle{Miscellaneous}
+
+  \begin{itemize}
+  \item Python 2.6 support deprecated!
+  \item Miscellaneous bug fixes
+  \item Test suite enhancements
+  \item Better PEP8 coding style adherence
+  \end{itemize}
 }
 
 \frame
@@ -273,23 +279,20 @@
 \subsection*{Release 1.67}
 \frame
 {
-  \frametitle{Biopython 1.67 (released 2016-06-08)}
-
-  \begin{itemize}
-  \item corrections to the Bio.Entrez module (Aaron Rosenfeld)
-  \item corrections to the MMCIF structure parser (João Rodrigues)
-  \item test suite improvements
-  \item PEP8!
-  \item Python 3.3 support deprecated
-  \end{itemize}
+  \center{\LARGE Biopython 1.67 (released 2016-06-08)}
 }
 
 \frame
 {
-  \frametitle{SeqRecord Class}
+  \frametitle{Bio.SeqRecord module}
   
   \begin{itemize}
-  \item deprecated ``=='' SeqRecord comparison (David Koppstein)
+  \item Bio.SeqRecord: Represent a sequence with annotation
+  \item Deprecation of ``=='' SeqRecord comparison (David Koppstein)
+  \begin{itemize}
+  \item Would return False even when SeqRecords had the same attributes
+  \item Surprising for many users
+  \end{itemize}
   \end{itemize}
 }
 
@@ -306,7 +309,7 @@
   \item Curve fitting
   \item Parameter extraction
   \end{itemize}
-  \item PlateRecord objects can be written as JSON (compatible with opm and DuctApe)
+  \item Writing PlateRecord objects as JSON (compatible with opm and DuctApe)
   \end{itemize}
 }
 
@@ -339,14 +342,24 @@
   \frametitle{BioSQL}
   
   \begin{itemize}
-  \item updates to BioSQL to use foreign keys with SQLite3 databases (Connor T. Skennerton)
+  \item BioSQL: SQL schema for biological sequence databases
+  \item \url{http://biosql.org/}
+  \item Updates to use foreign keys with SQLite3 databases (Connor T. Skennerton)
   \end{itemize}
-
 }
 
 \frame
 {
-  \frametitle{foo}
+  \frametitle{Miscellaneous}
+
+  \begin{itemize}
+  \item Python 3.3 support deprecated!
+  \item Corrections to the Bio.Entrez module (Aaron Rosenfeld)
+  \item Corrections to the MMCIF structure parser (João Rodrigues)
+  \item Miscellaneous bug fixes
+  \item Test suite enhancements
+  \item Better PEP8 coding style adherence
+  \end{itemize}
 }
 
 \frame
@@ -396,13 +409,10 @@
 \subsection*{Current Developments}
 \frame
 {
-  \frametitle{Current Developments}
+  \frametitle{1.68-dev}
 
   \begin{itemize}
-  \item Bio.PDB extended to parse the RSSB's new binary Macromolecular
-Transmission Format (MMTF) Anthony Bradley -> Posters 21+22
-
-  \item Module Bio.pairwise2 has been re-written (faster, addresses some problems with local alignments, and also now allows gap insertions after deletions, and vice versa) -> Markus Piotrowski
+  \item Module Bio.pairwise2 (pairwise sequence alignment) re-written (faster, addresses some problems with local alignments, and also now allows gap insertions after deletions, and vice versa) (Markus Piotrowski)
 
   \item The sample graphical tool SeqGui (Sequence Graphical User Interface) was
 rewritten using the tkinter library (contributed by Markus Piotrowski). This
@@ -410,11 +420,25 @@ allows simple nucleotide transcription, back-transcription and translation
 into amino acids using Bio.Seq internally, offering of the NCBI genetic codes
 supported in Biopython. -> Markus Piotrowski
 
-  \item In line with NCBI website changes, Biopython now uses HTTPS rather than HTTP
-to connect to the NCBI Entrez and QBLAST API. (Peter Cock)
+  \item NCBI Entrez and QBLAST API access through HTTPS rather than HTTP (Peter Cock)
 
   \item Bug fixes, further additions to the test suite, more Python PEP8 style adherence
 
+  \end{itemize}
+}
+
+
+\frame
+{
+  \frametitle{Bio.PDB}
+  
+  \begin{itemize}
+  \item Addition of RSSB's new Macromolecular Transmission Format (MMTF) (Anthony Bradley)
+  \begin{itemize}
+  \item Compressed binary format
+  \item Better I/O attributes than PDB format
+  \item $\Rightarrow$ Posters 21/22
+  \end{itemize}
   \end{itemize}
 }
 
@@ -459,7 +483,7 @@ to connect to the NCBI Entrez and QBLAST API. (Peter Cock)
   \frametitle{PEP8 Style}
   
   \begin{itemize}
-  \item Previously, widely different coding style in different modules
+  \item Widely different coding style in different modules in the past
   \item Large cleanup effort since 2012
   \item Git pre-commit hook (\url{https://github.com/cbrueffer/pep8-git-hook})
   \item Automatic style checking through TravisCI in preparation
