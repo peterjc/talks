@@ -163,10 +163,10 @@
   \frametitle{Biopython 1.66 (released 2015-10-21)}
 
   \begin{itemize}
-  \item extended Bio.KEGG and Bio.Graphics modules to support drawing KEGG pathways with transparency
-  \item extended ``abi'' Bio.SeqIO parser to decode almost all documented fields used by ABIF instruments
-  \item QCPSuperimposer module using the Quaternion Characteristic Polynomial algorithm for superimposing structures to Bio.PDB
-  \item extended Bio.Entrez module to implement the NCBI Entrez Citation Matching function and to support NCBI XML files with XSD schemas.
+  \item extended Bio.KEGG and Bio.Graphics modules to support drawing KEGG pathways with transparency (Leighton Pritchard)
+  \item extended ``abi'' Bio.SeqIO parser to decode almost all documented fields used by ABIF instruments (Eric Rasche)
+  \item QCPSuperimposer module using the Quaternion Characteristic Polynomial algorithm for superimposing structures to Bio.PDB (Anuj Sharma)
+  \item extended Bio.Entrez module to implement the NCBI Entrez Citation Matching function and to support NCBI XML files with XSD schemas (Aaron Rosenfeld)
   \item miscellaneous bug fixes, test suite enhancement, better PEP8 coding style adherence
   \item Python 2.6 support deprecated
   \end{itemize}
@@ -222,12 +222,13 @@
   \frametitle{Biopython 1.67 (released 2016-06-08)}
 
   \begin{itemize}
-  \item deprecated ``=='' SeqRecord comparison
-  \item Bio.phenotype module for working with Phenotype Microarray data
+  \item deprecated ``=='' SeqRecord comparison (David Koppstein)
+  \item Bio.phenotype module for working with Phenotype Microarray data (Marco Galardini)
   \item updates to Bio.Data to include NCBI genetic code table 25 (covering Candidate Division SR1 and Gracilibacteria)
-  \item update to Bio.Restriction to include the REBASE May 2016 restriction enzyme list
-  \item updates to BioSQL to use foreign keys with SQLite3 databases
-  \item corrections to the Bio.Entrez module and the MMCIF structure parser
+  \item update to Bio.Restriction to include the REBASE May 2016 restriction enzyme list (Markus Piotrowski)
+  \item updates to BioSQL to use foreign keys with SQLite3 databases (Connor T. Skennerton)
+  \item corrections to the Bio.Entrez module (Aaron Rosenfeld)
+  \item corrections to the MMCIF structure parser
   \item Python 3.3 support deprecated
   \end{itemize}
 }
@@ -282,21 +283,21 @@
 
   \begin{itemize}
   \item Bio.PDB extended to parse the RSSB's new binary Macromolecular
-Transmission Format (MMTF)
+Transmission Format (MMTF) Anthony Bradle -> Poster 22
 
-  \item Module Bio.pairwise2 has been re-written (faster, addresses some problems with local alignments, and also now allows gap insertions after deletions, and vice versa)
+  \item Module Bio.pairwise2 has been re-written (faster, addresses some problems with local alignments, and also now allows gap insertions after deletions, and vice versa) -> Markus Piotrowski
 
   \item The sample graphical tool SeqGui (Sequence Graphical User Interface) was
 rewritten using the tkinter library (contributed by Markus Piotrowski). This
 allows simple nucleotide transcription, back-transcription and translation
 into amino acids using Bio.Seq internally, offering of the NCBI genetic codes
-supported in Biopython.
+supported in Biopython. -> Markus Piotrowski
 
   \item New NCBI genetic code table 26 (Pachysolen tannophilus Nuclear Code) has been
 added to Bio.Data (and the translation functionality)
 
   \item In line with NCBI website changes, Biopython now uses HTTPS rather than HTTP
-to connect to the NCBI Entrez and QBLAST API.
+to connect to the NCBI Entrez and QBLAST API. (Peter Cock)
 
   \item Bug fixes, further additions to the test suite, more Python PEP8 style adherence
 
@@ -411,7 +412,7 @@ to connect to the NCBI Entrez and QBLAST API.
 
 \frame
 {
-  \frametitle{Thanks to...}
+  \frametitle{Acknowledgements}
 
   \begin{minipage}{1\textwidth}
   \begin{columns}
@@ -425,7 +426,7 @@ to connect to the NCBI Entrez and QBLAST API.
   \end{columns}
   \end{minipage}
 
-  \vspace{1cm}
+  \vspace{0.5cm}
 
   \begin{minipage}{1\textwidth}
   \begin{columns}
@@ -436,6 +437,21 @@ to connect to the NCBI Entrez and QBLAST API.
   \end{itemize}
   \column{0.5\textwidth}
   \includegraphics[width=0.5\textwidth]{LundUniversity_C2line_PMS.eps}
+  \end{columns}
+  \end{minipage}
+  
+  \vspace{0.5cm}  
+  
+  \begin{minipage}{1\textwidth}
+  \begin{columns}
+  \column{0.25\textwidth}
+  \includegraphics[width=0.5\textwidth]{github-logo.jpg}
+  \column{0.25\textwidth}
+  \includegraphics[width=0.5\textwidth]{travisci-logo.png}
+  \column{0.25\textwidth}
+  \includegraphics[width=0.5\textwidth]{codecov-logo.png}
+  \column{0.25\textwidth}
+  \includegraphics[width=0.5\textwidth]{quantifiedcode-logo.png}
   \end{columns}
   \end{minipage}
 }
