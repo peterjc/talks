@@ -73,14 +73,31 @@
 
   \begin{itemize}
   \item Collection of modules for biological computation in Python
-  \item First release in 2000
+  \begin{itemize}
+  \item Sequence handling and motifs, parsers, database queries, protein structures, phylogenetics, tool wrappers and lots more
+  \end{itemize}
+  \item Started in 1999, first release in 2000
   \item Open source and freely available (Biopython license)
   \end{itemize}
+
+  \begin{center}
+  \includegraphics[width=0.9\textwidth]{openhub-bp-nutshell.png}\\
+  \tiny{Source: \url{https://www.openhub.net/p/biopython}}
+  \end{center}
 }
 \frame
 {
-  \frametitle{Blackduck OpenHUB Stats}
+  \frametitle{Stats for the last 12 months}
 
+  %\begin{center}
+  %\includegraphics[width=0.9\textwidth]{openhub-bp-activity.png}
+  %\end{center}
+
+  \begin{center}
+  %\includegraphics[width=0.9\textwidth]{openhub-bp-community.png}
+  \includegraphics[width=1.0\textwidth]{openhub-bp-activity-community.png}
+  \end{center}
+  \small{Source: \url{https://www.openhub.net/p/biopython}}
 }
 \frame
 {
@@ -109,6 +126,7 @@
   \item QCPSuperimposer module using the Quaternion Characteristic Polynomial algorithm for superimposing structures to Bio.PDB
   \item extended Bio.Entrez module to implement the NCBI Entrez Citation Matching function and to support NCBI XML files with XSD schemas.
   \item miscellaneous bug fixes, test suite enhancement, better PEP8 coding style adherence
+  \item Python 2.6 support deprecated
   \end{itemize}
 }
 \subsection*{Release 1.67}
@@ -123,6 +141,7 @@
   \item update to Bio.Restriction to include the REBASE May 2016 restriction enzyme list
   \item updates to BioSQL to use foreign keys with SQLite3 databases
   \item corrections to the Bio.Entrez module and the MMCIF structure parser
+  \item Python 3.3 support deprecated
   \end{itemize}
 }
 \subsection*{Current Developments}
@@ -131,7 +150,25 @@
   \frametitle{Current Developments}
 
   \begin{itemize}
-  \item XXX include updates since end of May!
+  \item Bio.PDB extended to parse the RSSB's new binary Macromolecular
+Transmission Format (MMTF)
+
+  \item Module Bio.pairwise2 has been re-written (faster, addresses some problems with local alignments, and also now allows gap insertions after deletions, and vice versa)
+
+  \item The sample graphical tool SeqGui (Sequence Graphical User Interface) was
+rewritten using the tkinter library (contributed by Markus Piotrowski). This
+allows simple nucleotide transcription, back-transcription and translation
+into amino acids using Bio.Seq internally, offering of the NCBI genetic codes
+supported in Biopython.
+
+  \item New NCBI genetic code table 26 (Pachysolen tannophilus Nuclear Code) has been
+added to Bio.Data (and the translation functionality)
+
+  \item In line with NCBI website changes, Biopython now uses HTTPS rather than HTTP
+to connect to the NCBI Entrez and QBLAST API.
+
+  \item Bug fixes, further additions to the test suite, more Python PEP8 style adherence
+
   \end{itemize}
 }
 
@@ -161,14 +198,40 @@
 \section{General Updates}
 \frame
 {
+  \frametitle{Continuous Integration}
+
+  \begin{itemize}
+  \item TravisCI
+  \item Experimentation of different services
+  \begin{itemize}
+  \item Codecov.io (test coverage)
+  \item Quantified Code (automatic pull requests with Cody)
+  \item Landscape.io (``health score'')
+  \end{itemize}
+  \item Currently enabled by default: CodeCov.io
+  \end{itemize}
+
+  \begin{columns}
+  \column{0.4\textwidth}
+  \includegraphics[width=1\textwidth]{bp-codecov.png}
+  \column{0.6\textwidth}
+  \includegraphics[width=1\textwidth]{bp-landscape.png}
+  \end{columns}
+}
+
+\frame
+{
   \frametitle{Website}
 
   \begin{itemize}
-  \item Previously hosted by OBF until server failure
-  \item Migrated from OBF MediaWiki to GitHub Pages and Jekyll
+  \item Previously hosted by OBF until server problems
+  \item Migrated from OBF MediaWiki to GitHub Pages
   \item Repository: \url{https://github.com/biopython/biopython.github.io}
-  \item Continuous integration: added Landscape.io, Quantified Code and Codecov
   \end{itemize}
+
+  \begin{center}
+  \includegraphics[width=0.9\textwidth]{bp-website.png}
+  \end{center}
 }
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -179,11 +242,42 @@
   \frametitle{Conclusion}
 
   \begin{itemize}
-  \item Another great year!
+  \item Lots of new stuff
+  \item Lots of new contributors
   \end{itemize}
 }
 
 \section*{Acknowledgements}
+\frame
+{
+  \frametitle{Resources!}
+
+  %\begin{center}
+  Website:\\
+  \begin{itemize}
+  \item \url{http://biopython.org}
+  \end{itemize}
+
+  Repositories:\\
+  \begin{itemize}
+  \item Main: \url{http://github.com/biopython/biopython}
+  \item Docker: \url{http://github.com/biopython/biopython_docker}
+  \item Website: \url{https://github.com/biopython/biopython.github.io}
+  \end{itemize}
+
+  Mailing lists:
+  \begin{itemize}
+  \item General list: \url{biopython@biopython.org}
+  \item Developers list: \url{biopython-dev@biopython.org}
+  \end{itemize}
+
+  Biostars:
+  \begin{itemize}
+  \item \url{https://www.biostars.org/t/biopython/} (``biopython'' category)
+  \end{itemize}
+  %\end{center}
+}
+
 \frame
 {
   \frametitle{Thanks to...}
@@ -201,30 +295,6 @@
   \item Lao Saal (PhD supervisor)
   \item Faculty of Medicine (Travel Grant)
   \end{itemize}
-}
-
-\frame
-{
-  \frametitle{Resources!}
-
-  \begin{center}
-  Website:\\
-  \begin{itemize}
-  \item \url{http://biopython.org}
-  \end{itemize}
-
-  Repositories:\\
-  \begin{itemize}
-  \item Main: \url{http://github.com/biopython/biopython}
-  \item Docker: \url{http://github.com/biopython/biopython_docker}
-  \end{itemize}
-
-  Mailing lists:
-  \begin{itemize}
-  \item General list: \url{biopython@biopython.org}
-  \item Developers list: \url{biopython-dev@biopython.org}
-  \end{itemize}
-  \end{center}
 }
 
 \end{document}
