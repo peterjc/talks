@@ -8,10 +8,24 @@
 
 \usepackage[utf8]{inputenc}
 \usepackage{graphicx}
-\usepackage{textpos}
-\usepackage{textcomp}
-\usepackage{floatrow}
 \usepackage{multicol}
+\usepackage{xcolor}
+\usepackage{listings}
+\lstset{frame=tb,
+  aboveskip=3mm,
+  belowskip=3mm,
+  showstringspaces=false,
+  columns=flexible,
+  basicstyle={\small\ttfamily},
+  numbers=none,
+  numberstyle=\tiny\color{gray},
+  keywordstyle=\color{blue},
+  commentstyle=\color{green!55!blue},
+  stringstyle=\color{purple},
+  breaklines=true,
+  breakatwhitespace=true,
+  tabsize=4
+}
 \usepackage{hyperref}
 \hypersetup{
   colorlinks=true,
@@ -34,7 +48,6 @@
   Lund University\\
   Sweden\\[1em]
   Bioinformatics Open Source Conference 2016, Orlando, USA \\[1em]
-  %\includegraphics[height=.2\textheight]{../abstract/biopython.jpg}
 }
 \date{July 9th, 2016}
 
@@ -60,10 +73,10 @@
 \end{frame}
 \setbeamertemplate{footline}[body]
 
-\begin{frame}
-    \frametitle{Outline}
-    \tableofcontents
-\end{frame}
+%\begin{frame}
+%    \frametitle{Outline}
+%    \tableofcontents
+%\end{frame}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
@@ -168,7 +181,7 @@
   \frametitle{Extended KEGG Plotting}
   
   \begin{itemize}
-  \item Bio.KEGG and Bio.Graphics support transparency (Leighton Pritchard)
+  \item \texttt{Bio.KEGG} and \texttt{Bio.Graphics} support transparency (Leighton Pritchard)
   \item \url{http://nbviewer.jupyter.org/github/widdowquinn/notebooks/blob/master/Biopython_KGML_intro.ipynb}
   \end{itemize}
   
@@ -179,10 +192,10 @@
 
 \frame
 {
-  \frametitle{Bio.SeqIO}
+  \frametitle{\texttt{Bio.SeqIO} Updates}
   
   \begin{itemize}
-  \item Bio.SeqIO: Sequence input/output as SeqRecord objects  
+  \item \texttt{Bio.SeqIO}: Sequence input/output as SeqRecord objects  
   \item Extended ``abi'' Bio.SeqIO parser (Eric Rasche)
   \begin{itemize}
   \item appliedbiosystems ABIF format
@@ -193,30 +206,35 @@
 
 \frame
 {
-  \frametitle{Bio.PDB}
+  \frametitle{\texttt{Bio.PDB} Updates}
   
   \begin{itemize}
-  \item Bio.PDB: Classes that deal with macromolecular crystal structures  
-  \item New QCPSuperimposer module (Anuj Sharma)
+  \item \texttt{Bio.PDB}: Classes that deal with macromolecular crystal structures  
+  \item New \texttt{QCPSuperimposer} module (Anuj Sharma)
   \begin{itemize}
   \item Additional option for superimposing structures
   \item Uses Quaternion Characteristic Polynomial algorithm
   \end{itemize}
   \end{itemize}
+  
+  \lstinputlisting[language=Python]{code/qcpsuperimposer.py}
 }
 
 \frame
 {
-  \frametitle{Bio.Entrez}
+  \frametitle{\texttt{Bio.Entrez} Updates}
   
   \begin{itemize}
-  \item Bio.Entrez: Provides code to access NCBI over the WWW
+  \item \texttt{Bio.Entrez}: Provides code to access NCBI over the WWW
   \item Better support for querying NCBI (Aaron Rosenfeld)
   \begin{itemize}
   \item Implement the NCBI Entrez Citation Matching function
   \item Support for NCBI XML files with XSD schemas
   \end{itemize}
-  \end{itemize}  
+  \end{itemize}
+  
+  \lstinputlisting[language=Python]{code/ecitmatch.py}
+  %proc natl acad sci u s a|1991|88|3248|mann bj|citation_1|2014248
 }
 
 \frame
@@ -284,13 +302,13 @@
 
 \frame
 {
-  \frametitle{Bio.SeqRecord module}
+  \frametitle{\texttt{Bio.SeqRecord} module}
   
   \begin{itemize}
-  \item Bio.SeqRecord: Represent a sequence with annotation
-  \item Deprecation of ``=='' SeqRecord comparison (David Koppstein)
+  \item \texttt{Bio.SeqRecord}: Represent a sequence with annotation
+  \item Deprecation of ``=='' \texttt{SeqRecord} comparison (David Koppstein)
   \begin{itemize}
-  \item Would return False even when SeqRecords had the same attributes
+  \item Would return False even when \texttt{SeqRecord}s had the same attributes
   \item Surprising for many users
   \end{itemize}
   \end{itemize}
@@ -298,10 +316,10 @@
 
 \frame
 {
-  \frametitle{Bio.phenotype}
+  \frametitle{\texttt{Bio.phenotype} Addition}
   
   \begin{itemize}
-  \item Bio.phenotype: New module! (Marco Galardini)
+  \item \texttt{Bio.phenotype}: New module! (Marco Galardini)
   \item Support for working with Phenotype microarray data
   \item Parsing and analysis of cell culture growth measurements
   \begin{itemize}
@@ -309,26 +327,26 @@
   \item Curve fitting
   \item Parameter extraction
   \end{itemize}
-  \item Writing PlateRecord objects as JSON (compatible with opm and DuctApe)
+  \item Writing \texttt{PlateRecord} objects as JSON (compatible with opm and DuctApe)
   \end{itemize}
 }
 
 \frame
 {
-  \frametitle{Bio.Restriction}
+  \frametitle{Bio.Restriction Updates}
   
   \begin{itemize}
-  \item Bio.Restriction: 
-  \item REBASE May 2016 restriction enzyme list (Markus Piotrowski)
+  \item Bio.Restriction: Restriction digest enzymes
+  \item Updated to REBASE May 2016 restriction enzyme list (Markus Piotrowski)
   \end{itemize}
 }
 
 \frame
 {
-  \frametitle{Bio.Data}
+  \frametitle{\texttt{Bio.Data} Updates}
   
   \begin{itemize}
-  \item Bio.Data: Collections of useful biological data (codon tables, alphabets, etc)
+  \item \texttt{Bio.Data}: Collections of useful biological data (codon tables, alphabets, etc)
   \item Inclusion of NCBI genetic code table 25
   \begin{itemize}
   \item Candidate Division SR1
@@ -339,7 +357,7 @@
 
 \frame
 {
-  \frametitle{BioSQL}
+  \frametitle{BioSQL Updates}
   
   \begin{itemize}
   \item BioSQL: SQL schema for biological sequence databases
@@ -354,7 +372,7 @@
 
   \begin{itemize}
   \item Python 3.3 support deprecated!
-  \item Corrections to the Bio.Entrez module (Aaron Rosenfeld)
+  \item Corrections to the \texttt{Bio.Entrez} module (Aaron Rosenfeld)
   \item Corrections to the MMCIF structure parser (João Rodrigues)
   \item Miscellaneous bug fixes
   \item Test suite enhancements
@@ -409,42 +427,52 @@
 \subsection*{Current Developments}
 \frame
 {
+  \center{\LARGE What's cooking for Biopython 1.68?}
+}
+
+
+\frame
+{
   \frametitle{1.68-dev}
 
   \begin{itemize}
-  \item Module Bio.pairwise2 (pairwise sequence alignment) re-written (faster, addresses some problems with local alignments, and also now allows gap insertions after deletions, and vice versa) (Markus Piotrowski)
+  \item Module \texttt{Bio.pairwise2} rewritten (Markus Piotrowski)
+  \begin{itemize}
+  \item faster, addresses some problems with local alignments
+  \item now allows gap insertions after deletions, and vice versa
+  \end{itemize}
 
-  \item The sample graphical tool SeqGui (Sequence Graphical User Interface) was
-rewritten using the tkinter library (contributed by Markus Piotrowski). This
-allows simple nucleotide transcription, back-transcription and translation
-into amino acids using Bio.Seq internally, offering of the NCBI genetic codes
-supported in Biopython. -> Markus Piotrowski
+  \item Sample graphical tool \texttt{SeqGui} (Sequence Graphical User Interface)
+rewritten using the tkinter library (Markus Piotrowski)
+  \begin{itemize}
+  \item Simple nucleotide transcription
+  \item Back-transcription
+  \item translation into amino acids using \texttt{Bio.Seq}
+  \end{itemize}
 
   \item NCBI Entrez and QBLAST API access through HTTPS rather than HTTP (Peter Cock)
-
-  \item Bug fixes, further additions to the test suite, more Python PEP8 style adherence
-
+  
   \end{itemize}
 }
 
-
 \frame
 {
-  \frametitle{Bio.PDB}
+  \frametitle{\texttt{Bio.PDB} Updates}
   
   \begin{itemize}
-  \item Addition of RSSB's new Macromolecular Transmission Format (MMTF) (Anthony Bradley)
+  \item Parsing of RSSB's new Macromolecular Transmission Format (MMTF) (Anthony Bradley)
   \begin{itemize}
-  \item Compressed binary format
-  \item Better I/O attributes than PDB format
+  \item Compressed binary format for chrystal structures
   \item $\Rightarrow$ Posters 21/22
   \end{itemize}
   \end{itemize}
+  
+  \lstinputlisting[language=Python]{code/mmtf.py}
 }
 
 \frame
 {
-  \frametitle{Bio.Data}
+  \frametitle{Bio.Data Updates}
   
   \begin{itemize}
   \item Bio.Data: Collections of useful biological data
@@ -483,11 +511,27 @@ supported in Biopython. -> Markus Piotrowski
   \frametitle{PEP8 Style}
   
   \begin{itemize}
-  \item Widely different coding style in different modules in the past
+  \item Widely different coding style throughout Biopython in the past
   \item Large cleanup effort since 2012
   \item Git pre-commit hook (\url{https://github.com/cbrueffer/pep8-git-hook})
   \item Automatic style checking through TravisCI in preparation
   \end{itemize}
+}
+
+\frame
+{
+  \frametitle{Supported Python Versions}
+  
+  \begin{itemize}
+  \item Python 2.6 (deprecated, unsupported after 1.68)
+  \item Python 2.7
+  \item Python 3.3 (deprecated, unsupported after 1.69)
+  \item Python 3.4
+  \item Python 3.5
+  \item PyPy 5.0
+  \item PyPy3 2.4
+  \item Jython 2.7
+  \end{itemize}  
 }
 
 \section{General Updates}
@@ -497,13 +541,13 @@ supported in Biopython. -> Markus Piotrowski
 
   \begin{itemize}
   \item TravisCI
-  \item Experimentation of different services
+  \item Experimentation with different services
   \begin{itemize}
   \item Codecov.io (test coverage)
   \item Quantified Code (metrics and automatic pull requests)
   \item Landscape.io (``health score'')
   \end{itemize}
-  \item Currently enabled by default: CodeCov.io
+  \item Currently enabled by default: Codecov.io
   \end{itemize}
 
   \begin{columns}
