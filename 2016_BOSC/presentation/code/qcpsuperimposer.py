@@ -1,4 +1,4 @@
-from Bio.PDB import QCPSuperimposer
+from Bio.PDB.QCPSuperimposer import QCPSuperimposer
 sup = QCPSuperimposer()
 # set the coords
 # y will be rotated and translated on x
