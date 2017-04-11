@@ -26,13 +26,16 @@
 \includegraphics[width=0.4\textwidth]{biopython.jpg}\\
 \vspace{3mm}Biopython Project Update 2017}
 \author{
+    % Author sorting: alphabetically, except the first author.
 	\underline{Sourav Singh}\thanks{Affiliation. Email: \href{mailto:ssouravsingh12@gmail.com}{ssouravsingh12@gmail.com}},
     Tiago Ant\~{a}o\thanks{Division of Biological Sciences, University of Montana, Montana, USA},
     Wibowo Arindrarto\thanks{Sequencing Analysis Support Core, Leiden University Medical Center, Leiden, NL},
     Christian Brueffer\thanks{Department of Clinical Sciences, Lund University, Lund, SE},
     Peter Cock\thanks{Information and Computational Sciences, James Hutton Institute (formerly SCRI), Invergowrie, Dundee, UK},\\
     Michiel de Hoon\thanks{Division of Genomic Technologies, RIKEN Center for Life Science Technologies, Yokohama, JP},
-    Leighton Pritchard\textsuperscript{c},  % same as Peter, saves space
+    Markus Piotrowski\thanks{Department of Plant Physiology, Ruhr-Universität Bochum, DE},
+    Leighton Pritchard\textsuperscript{e},  % same as Peter, saves space
+    Connor T. Skennerton\thanks{Division of Geological and Planetary Sciences, California Institute of Technology, Pasadena, CA, USA},\\
     Eric Talevich\thanks{Department of Dermatology, University of California San Francisco, San Francisco, CA, USA},
     and the Biopython Contributors}
 \date{18\textsuperscript{th} Bioinformatics Open Source Conference (BOSC) 2017, Prague, CZ}
@@ -45,41 +48,28 @@
 \noindent
 Website: \url{http://biopython.org} \\
 Repository: \url{https://github.com/biopython/biopython} \\
-License: Biopython License Agreement (MIT style, see \url{http://www.biopython.org/DIST/LICENSE}) \\
+License: Biopython License Agreement (MIT style, see \url{http://www.biopython.org/DIST/LICENSE}); transition to 3-Clause BSD License ongoing\\
 
 The Biopython Project is a long-running distributed collaborative effort,
 supported by the Open Bioinformatics Foundation, which develops a freely
 available Python library for biological computation \cite{AppNote}.
 
-We present here details of the latest Biopython release - version 1.66. New
-features include: extended Bio.KEGG and Bio.Graphics modules to support drawing
-KEGG pathways with transparency; extended ``abi'' Bio.SeqIO parser to decode
-almost all documented fields used by ABIF instruments; a QCPSuperimposer
-module using the Quaternion Characteristic Polynomial algorithm for superimposing
-structures to Bio.PDB; and an extended Bio.Entrez module to implement the NCBI
-Entrez Citation Matching function and to support NCBI XML files with XSD schemas.
-Additionally we fixed miscellaneous bugs, enhanced our test suite and continued our
-efforts to abide by the PEP8 coding style guidelines.
+We present here details of the latest Biopython release - version 1.69.  With this
+release we started to dual-license Biopython under both our original liberal
+"Biopython License Agreement", and the very similar but more commonly used
+"3-Clause BSD License".  In this release a small number of the Python files
+are explicitly available under either license, but most of the code remains
+under the "Biopython License Agreement" only.  New features in this release
+include:
 
-We are currently preparing a new release -- version 1.67 -- that will deprecate the
-ability to compare SeqRecord objects with ``=='', which sometimes lead to surprising
-results.  In addition it will feature a new experimental Bio.phenotype module for
-working with Phenotype Microarray data; updates to Bio.Data to include NCBI genetic
-code table 25, covering Candidate Division SR1 and Gracilibacteria; an update to
-Bio.Restriction to include the REBASE May 2016 restriction enzyme list; updates to
-BioSQL to use foreign keys with SQLite3 databases; as well as corrections
-to the Bio.Entrez module and the MMCIF structure parser.
+We are currently preparing a new release -- version 1.70 -- that includes$\cdots$
 
-Our website has been migrated from MediaWiki to GitHub Pages and is now under version
-control.  The continuous integration process on GitHub has been enhanced by
-including external services like Landscape, Quantified Code and Codecov to
-perform quality review, test coverage analysis and generation of quality metrics.
+Additionally, a number of small bugs have been fixed with further additions
+to the test suite, and there has been further work to follow the Python PEP8
+and best practice standard coding style.
 
-Finally, our range of Docker containers has been greatly enhanced. In addition to
-a basic container that includes Python 2 and 3 with Biopython and all its
-dependencies, as well as a BioSQL container, we now also provide two versions
-of Jupyter notebook containers: a basic one, and a version including the
-Biopython tutorial as notebooks.
+Our continuous integration process on GitHub has been enhanced by
+using Tox to check for PEP8 style violations.
 
 
 \begin{thebibliography}{}
