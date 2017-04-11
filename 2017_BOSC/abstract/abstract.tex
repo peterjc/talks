@@ -26,17 +26,9 @@
 \includegraphics[width=0.4\textwidth]{biopython.jpg}\\
 \vspace{3mm}Biopython Project Update 2017}
 \author{
-    % Author sorting: alphabetically, except the first author.
 	\underline{Sourav Singh}\thanks{Affiliation. Email: \href{mailto:ssouravsingh12@gmail.com}{ssouravsingh12@gmail.com}},
-    Tiago Ant\~{a}o\thanks{Division of Biological Sciences, University of Montana, Montana, USA},
-    Wibowo Arindrarto\thanks{Sequencing Analysis Support Core, Leiden University Medical Center, Leiden, NL},
     Christian Brueffer\thanks{Department of Clinical Sciences, Lund University, Lund, SE},
-    Peter Cock\thanks{Information and Computational Sciences, James Hutton Institute (formerly SCRI), Invergowrie, Dundee, UK},\\
-    Michiel de Hoon\thanks{Division of Genomic Technologies, RIKEN Center for Life Science Technologies, Yokohama, JP},
-    Markus Piotrowski\thanks{Department of Plant Physiology, Ruhr-Universität Bochum, DE},
-    Leighton Pritchard\textsuperscript{e},  % same as Peter, saves space
-    Connor T. Skennerton\thanks{Division of Geological and Planetary Sciences, California Institute of Technology, Pasadena, CA, USA},\\
-    Eric Talevich\thanks{Department of Dermatology, University of California San Francisco, San Francisco, CA, USA},
+    Peter Cock\thanks{Information and Computational Sciences, James Hutton Institute, Invergowrie, Dundee, UK},\\
     and the Biopython Contributors}
 \date{18\textsuperscript{th} Bioinformatics Open Source Conference (BOSC) 2017, Prague, CZ}
 
@@ -48,29 +40,26 @@
 \noindent
 Website: \url{http://biopython.org} \\
 Repository: \url{https://github.com/biopython/biopython} \\
-License: Biopython License Agreement (MIT style, see \url{http://www.biopython.org/DIST/LICENSE}); transition to 3-Clause BSD License ongoing\\
+License: Biopython License Agreement (BSD like, see \url{http://www.biopython.org/DIST/LICENSE}) \\
 
 The Biopython Project is a long-running distributed collaborative effort,
 supported by the Open Bioinformatics Foundation, which develops a freely
 available Python library for biological computation \cite{AppNote}.
 
-We present here details of the latest Biopython release - version 1.69.  With this
-release we started to dual-license Biopython under both our original liberal
-"Biopython License Agreement", and the very similar but more commonly used
-"3-Clause BSD License".  In this release a small number of the Python files
-are explicitly available under either license, but most of the code remains
-under the "Biopython License Agreement" only.  New features in this release
-include:
+We present here details of the latest Biopython release - version 1.69.
 
-We are currently preparing a new release -- version 1.70 -- that includes$\cdots$
+This includes the start of a re-licensing plan, to transition away from our liberal
+but unique \emph{Biopython License Agreement} to the similar but very widely used
+\emph{3-Clause BSD License}. We are reviewing the code base authorship file-by-file,
+in order to gradually dual license the entire project.
 
-Additionally, a number of small bugs have been fixed with further additions
-to the test suite, and there has been further work to follow the Python PEP8
-and best practice standard coding style.
+Additionally we fixed miscellaneous bugs, enhanced our test suite and continued our
+efforts to abide by the PEP8 and PEP257 coding style guidelines which is now checked
+automatically with GitHub-integrated continous integration testing using TravisCI.
+Current efforts include improving the unit test coverage, which is easily viewed
+online at \href{https://codecov.io/github/biopython/biopython/}{CodeCov.io}.
 
-Our continuous integration process on GitHub has been enhanced by
-using Tox to check for PEP8 style violations.
-
+We are currently preparing a new release -- version 1.70.
 
 \begin{thebibliography}{}
 
