@@ -47,8 +47,23 @@ supported by the Open Bioinformatics Foundation, which develops a freely
 available Python library for biological computation \cite{AppNote}.
 
 We present here details of the latest Biopython release - version 1.69.
-
-This includes the start of a re-licensing plan, to transition away from our liberal
+New features include: a new parser for the ExPASy Cellosaurus cell line
+database, catalogue and ontology; Bio.AlignIO now supports the UCSC Multiple
+Alignment Format (MAF), including indexed access to large files using SQLite3;
+Bio.SearchIO.AbiIO can now parse FSA files; an extended Bio.Affy module supporting
+version 4 of the Affymetrix CEL format; updated Uniprot parsers to support
+the "submittedName" XML element and features with unknown locations; better
+handling of internal node comments in the NEXUS parser to improve compatibility
+with tools such as BEAST TreeAnnotator; an update to Bio.Restriction to include
+the REBASE February 2017 restriction enzyme list; updated Bio.SeqIO parsers for
+GenBank, EMBL, and IMGT that now record the molecule type from the LOCUS/ID line
+in the record.annotations dictionary and can cope with more format variations;
+Bio.PDB.PDBList now can download PDBx/mmCif (new default), PDB (old default),
+PDBML/XML and mmtf format protein structures; enhanced PyPy support by taking
+advantage of NumPy and compiling most of the Biopython C code modules; the Bio.Seq
+module now offers a complement function for consistency and a SeqFeature object's
+qualifiers attribute is now an explicitly ordered dictionary.
+This also includes the start of a re-licensing plan, to transition away from our liberal
 but unique \emph{Biopython License Agreement} to the similar but very widely used
 \emph{3-Clause BSD License}. We are reviewing the code base authorship file-by-file,
 in order to gradually dual license the entire project.
