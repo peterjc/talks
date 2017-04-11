@@ -1,0 +1,98 @@
+\documentclass[10pt,oneside]{article}
+
+%%%%%%%%%%%%%
+\setlength{\textheight}{8.75in} %Letter is 11in, less 2 for margins, less 0.25 for footer
+\setlength{\oddsidemargin}{0.0in} %gets +1inc
+\setlength{\evensidemargin}{0.0in} %gets +1inch
+\setlength{\textwidth}{6.50in} %Letter is 8.5, less 2 inches for margins
+\setlength{\topmargin}{0.5in}
+\setlength{\headheight}{0in}
+\setlength{\headsep}{0in}
+\setlength{\parindent}{0.25in}
+%%%%%%%%%%%%
+
+% use letters instead of symbols to accomodate >7 authors
+\makeatletter
+\let\@fnsymbol\@alph
+\makeatother
+
+\usepackage[utf8]{inputenc}
+\usepackage[numbers]{natbib}
+\usepackage{graphicx}
+\usepackage[colorlinks=true,citecolor=black,urlcolor=blue]{hyperref}
+
+\title{%Hack to get the logo on the PDF front page:
+\vspace{-1.5in}
+\includegraphics[width=0.4\textwidth]{biopython.jpg}\\
+\vspace{3mm}Biopython Project Update 2016}
+\author{
+	\underline{Christian Brueffer}\thanks{Department of Clinical Sciences, Lund University, Lund, SE. Email: \href{mailto:christian.brueffer@med.lu.se}{christian.brueffer@med.lu.se}},
+    Tiago Ant\~{a}o\thanks{Division of Biological Sciences, University of Montana, Montana, USA},
+    Peter Cock\thanks{Information and Computational Sciences, James Hutton Institute (formerly SCRI), Invergowrie, Dundee, UK},
+    Eric Talevich\thanks{Department of Dermatology, University of California San Francisco, San Francisco, CA, USA},
+    Michiel de Hoon\thanks{Division of Genomic Technologies, RIKEN Center for Life Science Technologies, Yokohama, JP},
+    Wibowo\\
+    Arindrarto\thanks{Sequencing Analysis Support Core, Leiden University Medical Center, Leiden, NL},
+    Leighton Pritchard\textsuperscript{c},  % same as Peter, saves space
+    Anuj Sharma\thanks{Department of Informatics and Telecommunications, University of Athens, Athens, Greece},
+    Eric Rasche\thanks{Center for Phage Technology, Department of Biochemistry and Biophysics, Texas A\&M University, USA},
+    Aaron Rosenfeld\thanks{Department of Biomedical Engineering, Science \& Health Systems, Drexel University, USA},
+    Connor T.\\
+    Skennerton\thanks{Division of Geological and Planetary Sciences, California Institute of Technology, Pasadena, CA, USA},
+    Marco Galardini\thanks{EMBL-EBI, Wellcome Trust Genome Campus, Cambridge, UK},
+    Markus Piotrowski\thanks{Department of Plant Physiology, Ruhr-Universität Bochum, DE},
+    and the Biopython Contributors}
+\date{17\textsuperscript{th} Bioinformatics Open Source Conference (BOSC) 2016, Orlando, USA}
+
+\begin{document}
+\maketitle
+\thispagestyle{empty}
+
+\vspace{-0.2in}
+\noindent
+Website: \url{http://biopython.org} \\
+Repository: \url{https://github.com/biopython/biopython} \\
+License: Biopython License Agreement (MIT style, see \url{http://www.biopython.org/DIST/LICENSE}) \\
+
+The Biopython Project is a long-running distributed collaborative effort,
+supported by the Open Bioinformatics Foundation, which develops a freely
+available Python library for biological computation \cite{AppNote}.
+
+We present here details of the latest Biopython release - version 1.66. New
+features include: extended Bio.KEGG and Bio.Graphics modules to support drawing
+KEGG pathways with transparency; extended ``abi'' Bio.SeqIO parser to decode
+almost all documented fields used by ABIF instruments; a QCPSuperimposer
+module using the Quaternion Characteristic Polynomial algorithm for superimposing
+structures to Bio.PDB; and an extended Bio.Entrez module to implement the NCBI
+Entrez Citation Matching function and to support NCBI XML files with XSD schemas.
+Additionally we fixed miscellaneous bugs, enhanced our test suite and continued our
+efforts to abide by the PEP8 coding style guidelines.
+
+We are currently preparing a new release -- version 1.67 -- that will deprecate the
+ability to compare SeqRecord objects with ``=='', which sometimes lead to surprising
+results.  In addition it will feature a new experimental Bio.phenotype module for
+working with Phenotype Microarray data; updates to Bio.Data to include NCBI genetic
+code table 25, covering Candidate Division SR1 and Gracilibacteria; an update to
+Bio.Restriction to include the REBASE May 2016 restriction enzyme list; updates to
+BioSQL to use foreign keys with SQLite3 databases; as well as corrections
+to the Bio.Entrez module and the MMCIF structure parser.
+
+Our website has been migrated from MediaWiki to GitHub Pages and is now under version
+control.  The continuous integration process on GitHub has been enhanced by
+including external services like Landscape, Quantified Code and Codecov to
+perform quality review, test coverage analysis and generation of quality metrics.
+
+Finally, our range of Docker containers has been greatly enhanced. In addition to
+a basic container that includes Python 2 and 3 with Biopython and all its
+dependencies, as well as a BioSQL container, we now also provide two versions
+of Jupyter notebook containers: a basic one, and a version including the
+Biopython tutorial as notebooks.
+
+
+\begin{thebibliography}{}
+
+\bibitem[Cock {\it et al}., 2009]{AppNote}Cock, P.J.A., Antao, T., Chang, J.T., Chapman, B.A., Cox, C.J., Dalke, A., Friedberg, I., Hamelryck, T., Kauff, F., Wilczynski, B., de Hoon, M.J. (2009) Biopython: freely available Python tools for computational molecular biology and bioinformatics. {\it Bioinformatics} {\bf 25}(11) 1422-3. \href{http://dx.doi.org/10.1093/bioinformatics/btp163}{doi:10.1093/bioinformatics/btp163}
+
+\end{thebibliography}
+
+\end{document}
