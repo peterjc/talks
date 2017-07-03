@@ -34,13 +34,13 @@
 \graphicspath{{figures/}}
 
 \title{
-  \includegraphics[height=.2\textheight]{../figures/biopython.jpg}\\[1em]
+  \includegraphics[height=.2\textheight]{figures/biopython.jpg}\\[1em]
   Biopython Project Update 2017}
 \subtitle{}
 \author[Sourav Singh]{
   \textbf{Sourav Singh}, Christian Brueffer, Peter Cock,\\
   and the Biopython Contributors}
-\institute[University of Pune]{University of Pune\\
+\institute[Savitribai Phule Pune University]{Savitribai Phule Pune University\\
   India\\[1em]
   Bioinformatics Open Source Conference 2017, Prague, CZ \\[1em]
 }
@@ -176,23 +176,11 @@ project.
   \end{itemize}
 
 }
-
 \frame
 {
-  \frametitle{New parser for ExPASy cell line database}
-
+  \frametitle{New features to Biopython 1.69}
   \begin{itemize}
-  \item \texttt{Bio.ExPASy}:
-  \begin{itemize}
-  \item Cellosaurus cell line database, cell ontologies and cell line catalogues.
-  \item Now accessible through the \texttt{Bio.ExPASy} module.
-  \end{itemize}
-  \end{itemize}
-}
-\frame
-{
-  \frametitle{Other new features to Biopython 1.69}
-  \begin{itemize}
+  \item Cellosaurus cell line database, cell ontologies and catalogues accessible through the \texttt{Bio.ExPASy} module.
   \item MAF files are now supported using the \texttt{Bio.AlignIO.MafIO} module
   \item Also offers indexed access for large files using SQLite3.
   \item Update to \texttt{Bio.Restriction} to include REBASE February 2017 restriction enzyme list.
@@ -241,6 +229,8 @@ advantage of NumPy and compiling most of the Biopython C code modules
   \item Support for new arguments to read and write blast-xml files.
   \end{itemize}
   \item Drop support for Python 3.3
+  \item Deprecate support for Jython.
+  \item Deprecate \texttt{Bio.GA} and {Bio.NeuralNetwork} modules.
   \end{itemize}
 
 }
@@ -288,6 +278,7 @@ advantage of NumPy and compiling most of the Biopython C code modules
   \item Landscape.io (``health score'')
   \end{itemize}
   \item Currently enabled by default: Codecov.io, Quantified Code
+  \item Support for Appveyor for running Windows builds.
   \end{itemize}
 
   \begin{columns}
@@ -335,6 +326,8 @@ advantage of NumPy and compiling most of the Biopython C code modules
   \includegraphics[width=0.5\textwidth]{figures/github-logo.jpg}
   \column{0.2\textwidth}
   \includegraphics[width=0.5\textwidth]{figures/travisci-logo.png}
+  \column{0.2\textwidth}
+  \includegraphics[width=0.5\textwidth]{figures/appveyor-logo-256.png}
   \column{0.2\textwidth}
   \includegraphics[width=0.5\textwidth]{figures/codecov-logo.png}
   \column{0.2\textwidth}
