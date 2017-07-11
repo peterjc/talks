@@ -23,7 +23,7 @@
 
 \title{%Hack to get the logo on the PDF front page:
 \vspace{-1.5in}
-\includegraphics[width=0.4\textwidth]{../presentation/figures/biopython.jpg}\\
+\includegraphics[width=0.4\textwidth]{../presentation/figures/biopython.jpg} \\
 \vspace{3mm}Biopython Project Update 2017}
 \author{
 	\underline{Sourav Singh}\thanks{Dept. of Computer Engineering, VIIT, Pune, India. Email: \href{mailto:ssouravsingh12@gmail.com}{ssouravsingh12@gmail.com}},
@@ -45,43 +45,49 @@ License: Biopython License Agreement (BSD like, see \url{http://www.biopython.or
 The Biopython Project is a long-running distributed collaborative effort,
 supported by the Open Bioinformatics Foundation, which develops a freely
 available Python library for biological computation \cite{AppNote}.
+We present here details of the Biopython releases since BOSC 2016,
+namely Biopython 1.68, 1.69 and 1.70. Together these had 82 named
+contributors including 51 newcomers which reflects our policy of
+trying to encourage even small contributions.
 
-We present here details of the latest Biopython release -- version 1.69.
-This represents eight months of contributions, and a record 49 named
-contributors including 28 newcomers which reflects our policy of trying to
-encourage even small contributions.
+Biopython 1.68 (August 2016) was a relatively small release,
+with the main new feature being support for RSSB's new binary
+Macromolecular Transmission Format (MMTF) for structural data.
 
-Biopython 1.69 represents the start of our re-licensing plan, to transition away
+Biopython 1.69 (April 2017) represents the start of our re-licensing plan, to transition away
 from our liberal but unique \emph{Biopython License Agreement} to the similar
 but very widely used \emph{3-Clause BSD License}. We are reviewing the code
 base authorship file-by-file, in order to gradually dual license the entire
 project.
 
-New features include: a new parser for the ExPASy Cellosaurus cell line
-database, catalogue and ontology; Bio.AlignIO now supports the UCSC Multiple
-Alignment Format (MAF), including indexed access to large files using SQLite3;
-Bio.SearchIO.AbiIO can now parse FSA files; an extended Bio.Affy module supporting
-version 4 of the Affymetrix CEL format; updated Uniprot parsers to support
-the ``submittedName'' XML element and features with unknown locations; better
-handling of internal node comments in the NEXUS parser to improve compatibility
-with tools such as BEAST TreeAnnotator; an update to Bio.Restriction to include
-the REBASE February 2017 restriction enzyme list; updated Bio.SeqIO parsers for
-GenBank, EMBL, and IMGT that now record the molecule type from the LOCUS/ID line
-in the record.annotations dictionary and can cope with more format variations;
-Bio.PDB.PDBList now can download PDBx/mmCif (new default), PDB (old default),
-PDBML/XML and mmtf format protein structures; enhanced PyPy support by taking
-advantage of NumPy and compiling most of the Biopython C code modules; the Bio.Seq
-module now offers a complement function for consistency and a SeqFeature object's
-qualifiers attribute is now an explicitly ordered dictionary.
+Major new features include: a new parser for the ExPASy Cellosaurus cell line
+database, catalogue and ontology; support for the UCSC Multiple Alignment Format (MAF),
+FSA sequencing files, version 4 of the Affymetrix CEL format; updates to the
+REBASE February 2017 restriction enzyme list;
+Bio.PDB.PDBList now can download more formats including MMTF;
+enhanced PyPy support by taking advantage of NumPy and compiling most of the Biopython C code modules.
 
-Additionally we fixed miscellaneous bugs, enhanced our test suite and continued our
-efforts to abide by the PEP8 and PEP257 coding style guidelines which is now checked
-automatically with GitHub-integrated continous integration testing using TravisCI.
+Biopython 1.70 (July 2017) has internal changes to better support the
+now standard \verb|pip| tool for Python package installation.
+Major new features include:
+support for Mauve's eXtended Multi-FastA (XMFA) file format,
+updates to our BLAST XML and MEME parsers, ExPASy support,
+and phylogenetic distance matrices.
+This release is noteworthy for our new logo (below),
+contributed by Patrick Kunzmann. This draws on our original double helix logo
+(above), and the blue and yellow colors of the current Python logo:
+
+\begin{center}
+\includegraphics[height=2.5cm]{../presentation/figures/biopython_logo_s.png}
+\end{center}
+
+All releases fixed miscellaneous bugs, enhanced the test suite,
+and continued efforts to follow the PEP8 and PEP257 coding style guidelines
+which is now checked automatically with GitHub-integrated continuous integration
+testing using TravisCI.
+We now also use AppVeyor for continuous integration testing under Windows.
 Current efforts include improving the unit test coverage, which is easily viewed
 online at \href{https://codecov.io/github/biopython/biopython/}{CodeCov.io}.
-
-We are currently preparing a new release -- version 1.70 -- that will feature an
-extended Bio.AlignIO module that supports Mauve's eXtended Multi-FastA (XMFA) file format.
 
 \begin{thebibliography}{}
 
