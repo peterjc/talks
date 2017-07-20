@@ -229,37 +229,20 @@ project.
 {
   \frametitle{New features in Biopython 1.69}
   \begin{itemize}
+  \item Improved PyPy support, all NumPy and most C code works.
   \item Cellosaurus cell line database, cell ontologies and catalogues accessible through the \texttt{Bio.ExPASy} module.
-  \item MAF files are now supported using the \texttt{Bio.AlignIO.MafIO} module
-  \item Also offers indexed access for large files using SQLite3.
-  \item Update to \texttt{Bio.Restriction} to include REBASE February 2017 restriction enzyme list.
-  \item \texttt{Bio.PDB.PDBList} can download PDBx/mmCif (new default), PDB (old default), PDBML/XML and MMTF format protein structures.
-  \item \texttt{Bio.Affy} module supports version 4 of Affymetrix CEL format
+  \item MAF files supported in \texttt{Bio.AlignIO}, including indexing.
+  \item \texttt{Bio.Restriction} updated to REBASE Feb 2017 enzyme list
+  \item \texttt{Bio.PDB} can download PDBx/mmCif (new default), PDB (old default), PDBML/XML, and MMTF protein structures.
+  \item \texttt{Bio.Affy} supports version 4 of Affymetrix CEL format.
   \end{itemize}
 
 }
 
-
-\frame
-{
-  \frametitle{Miscellaneous}
-
-  \begin{itemize}
-  \item Miscellaneous bug fixes
-  \item Test suite enhancements
-  \item Better PEP8 and PEP257 coding style adherence
-  \item Enhanced PyPy support by taking
-advantage of NumPy and compiling most of the Biopython C code modules
-  \end{itemize}
-}
-
-
-\subsection*{Current Developments}
 \frame
 {
   \center{\LARGE Biopython 1.70 (released 2017-07-10)}
 }
-
 
 \frame
 {
@@ -298,7 +281,7 @@ advantage of NumPy and compiling most of the Biopython C code modules
 }
 \frame
 {
-  \frametitle{Supported Python Versions}
+  \frametitle{Currently supported Python versions}
 
   \begin{itemize}
   \item Python 2.7
@@ -312,20 +295,33 @@ advantage of NumPy and compiling most of the Biopython C code modules
 }
 
 \section{General Updates}
+
+\frame
+{
+  \frametitle{On going work}
+
+  \begin{itemize}
+  \item Miscellaneous bug fixes
+  \item Test suite enhancements
+  \item Better PEP8 and PEP257 coding style adherence
+  \end{itemize}
+}
+
 \frame
 {
   \frametitle{Continuous Integration}
 
   \begin{itemize}
   \item TravisCI
-  \item Experimentation with Build Stages for CI testing.
-  \begin{itemize}
-  \item Codecov.io (test coverage)
+      \begin{itemize}
+      \item Linux testing with coverage
+      \item Style checks with flake8
+      \item Experimenting with Build Stages
+      \end{itemize}
+  \item Appveyor (Windows testing with coverage)
+  \item Codecov.io (tracking unit test coverage)
   \item Quantified Code (metrics and automatic pull requests)
   \item Landscape.io (``health score'')
-  \end{itemize}
-  \item Currently enabled by default: Codecov.io, Quantified Code
-  \item Support for Appveyor for running Windows builds.
   \end{itemize}
 
   \begin{columns}
@@ -345,7 +341,7 @@ advantage of NumPy and compiling most of the Biopython C code modules
   \item Lots of new contributors
   \item Lots of new stuff
   \item Turn new contributors into recurring ones
-  \item Biopython 1.70 latest release
+  \item Biopython 1.71 in the near future
   \end{itemize}
 }
 
