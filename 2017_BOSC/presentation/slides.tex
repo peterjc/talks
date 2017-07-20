@@ -37,6 +37,14 @@
 \def\Arrow{\raisebox{-.5\height}{\scalebox{4}{$\rightarrow$}}}
 \def\Image#1{\raisebox{-.5\height}{\includegraphics[width=3.5cm]{#1}}}
 
+\newcommand\Wider[2][3em]{%
+\makebox[\linewidth][c]{%
+  \begin{minipage}{\dimexpr\textwidth+#1\relax}
+  \raggedright#2
+  \end{minipage}%
+  }%
+}
+
 \title{
   \includegraphics[height=.3\textwidth]{figures/biopython_logo_s.png}\\[1em]
   Biopython Project Update 2017}
@@ -88,69 +96,96 @@
 }
 \frame
 {
-  \frametitle{Lots of new contributors!}
-
-  \scriptsize{
-  \begin{multicols}{3}
+  \frametitle{80 named contributors this year, 51 newcomers with star!}
+  \Wider{
+  \tiny{
+  \begin{multicols}{4}
   \begin{itemize}
-  % 1.68
-  \item Anthony Bradley
-  \item Kristian Davidsen
-  \item Olivier Morelle
+  \item Aaron Kitzmiller*
+  \item Aaron Rosenfeld
+  \item Adam Kurkiewicz*
+  \item Adam Novak*
+  \item Adil Iqbal*
+  \item Adrian Altenhoff*
+  \item Allis Tauri*
+  \item Andrew Dalke
+  \item Andrew Guy*
+  \item Andrew Sczesnak*
+  \item Anthony Bradley*
+  \item Ariel Aptekmann*
+  \item Ben Fulton
+  \item Bernhard Thiel*
+  \item Bertrand Caron*
+  \item Bertrand N{\'e}ron % Bertrand NÈron
+  \item Blaise Li*
+  \item Brandon Carter*
+  \item Brandon Invergo
+  \item Carlos Pena
+  \item Carlos R{\'i}os % Carlos RÌos
+  \item Chris Rands
+  \item Chris Warth
+  \item Connor T. Skennerton
+  \item Emmanuel Noutahi
+  \item Eric Rasche
+  \item Eric Talevich
+  \item Foen Peng*
+  \item Francesco Gastaldello*
+  \item Francisco Pina-Martins*
+  \item Fran{\c c}ois Coste* % FranÁois Coste
+  \item Frederic Sapet*
+  \item Hector Martinez*
+  \item Iddo Friedberg
+  \item Jacek {\'S}mieta{\'n}ski % Jacek ?mieta?ski
+  \item Jack Twilley*
+  \item Jared Andrews*
+  \item Jeroen Van Goey*
+  \item Jimmy O'Donnell*
+  \item John Kern*
+  \item Jordan Willis*
+  \item Joshua Meyers*
+  \item Jo{\~a}o Rodrigues % Jo„o Rodrigues
+  \item Kai Blin
+  \item Kristian Davidsen*
+  \item Kurt Graff*
+  \item Lenna Peterson
+  \item Leonhard Heizinger*
+  \item Marcin Magnus*
+  \item Markus Piotrowski
+  \item Mateusz Korycinski*
+  \item Maximilian Greil*
+  \item Micha{\l} J. Gajda* % Micha? J. Gajda*
+  \item Michiel de Hoon
+  \item Milind Luthra*
+  \item morrme*
+  \item Noam Kremen*
+  \item Olivier Morelle*
+  \item Oscar G. Garcia*
+  \item Owen Solberg
+  \item Patrick Kunzmann*
+  \item Peter Cock
+  \item Rasmus Fonseca*
+  \item Richard Neher*
+  \item Rodrigo Dorantes-Gilardi*
+  \item Sacha Laurent*
+  \item Sebastian Bassi
+  \item Sourav Singh*
+  \item Spencer Bliven*
   \item Stefans Mezulis
-  \item Uwe Schmitt
-  \item Xiaoyu Zhuo
-
-  % 1.69
-  \item Adam Kurkiewicz
-  \item Adam Novak
-  \item Adrian Altenhoff
-  \item Allis Tauri
-  \item Andrew Guy
-  \item Andrew Sczesnak
-  \item Bernhard Thiel
-  \item Blaise Li
-  \item Brandon Carter
-  \item Foen Peng
-  \item Francesco Gastaldello
-  \item Francisco Pina-Martins
-  \item Hector Martinez
-  \item Jack Twilley
-  \item Jeroen Van Goey
-  \item Joshua Meyers
-  \item Kurt Graff
-  \item Leonhard Heizinger
-  \item Marcin Magnus
-  \item Maximilian Greil
-  \item Micha≈Ç J. Gajda
-  \item Milind Luthra
-  \item Oscar G. Garcia
-  \item Richard Neher
-  \item Sourav Singh
-  \item Spencer Bliven
-  \item Steve Marshall
-  \item Veronika Berman
-
-  % 1.70
-  \item Aaron Kitzmiller
-  \item Adil Iqbal
-  \item Ariel Aptekmann
-  \item Bertrand Caron
-  \item Fran√ßois Coste
-  \item Frederic Sapet
-  \item Jimmy O'Donnell
-  \item Jared Andrews
-  \item John Kern
-  \item Jordan Willis
-  \item Mateusz Korycinski
-  \item morrme
-  \item Noam Kremen
-  \item Rasmus Fonseca
-  \item Rodrigo Dorantes-Gilardi
-  \item Sacha Laurent
-  \item Ted Cybulski
+  \item Steve Bond
+  \item Steve Marshall*
+  \item Ted Cybulski*
+  \item Tiago Antao
+  \item Travis Wrightsman
+  \item Uri Laserson
+  \item Uwe Schmitt*
+  \item Veronika Berman*
+  \item Vincent Davis
+  \item Wibowo Arindrarto % Wibowo `Bow' Arindrarto
+  \item Xiaoyu Zhuo*
+  \item Zheng Ruan
   \end{itemize}
   \end{multicols}
+  }
   }
 }
 
