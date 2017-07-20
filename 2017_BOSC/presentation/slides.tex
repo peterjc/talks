@@ -202,10 +202,10 @@
 
   \begin{itemize}
   \item Final Release supporting Python 2.6
-  \item Added extension to \texttt{Bio.PDB} to allow for parsing of the new MMTF format.
+  \item \texttt{Bio.PDB} can now parse the new MMTF format.
   \item \texttt{Bio.pairwise2} rewritten to address speed and problems with local alignments.
   \item \texttt{SeqGui} and \texttt{xbbtools} rewritten using tkinter.
-  \item Biopython now uses HTTPS instead of HTTP to connect to Entrez and QBLAST API.
+  \item Biopython now uses HTTPS instead of HTTP to connect to NCBI Entrez and QBLAST API.
   \end{itemize}
 
 }
@@ -218,10 +218,11 @@
   \frametitle{Start of re-licensing plan}
 
   \begin{itemize}
-  \item 1.69 marks the start of start of our re-licensing plan, to transition away
-from liberal \emph{Biopython License Agreement} to the widely used \emph{3-Clause BSD License}.
-\item The code base-authorship is being reviewed file-by-file, in order to gradually dual license the entire
-project.
+  \item Biopython 1.69 marked start of our re-licensing plan.
+  \item transitioning away from liberal \emph{Biopython License Agreement},
+  to the widely used \emph{3-Clause BSD License}.
+  \item Code base authorship being reviewed file-by-file,
+  \item will gradually dual license the entire project.
   \end{itemize}
 
 }
@@ -302,6 +303,7 @@ project.
 
   \begin{itemize}
   \item Miscellaneous bug fixes
+  \item Improving built-in docstrings (Python API documentation)
   \item Test suite enhancements and coverage improvements
   \item Better \href{https://www.python.org/dev/peps/pep-0008/}{PEP8} and \href{https://www.python.org/dev/peps/pep-0257/}{PEP257} coding style adherence
   \item Automating build process for wheel packages \url{http://github.com/biopython/biopython-wheels}
@@ -341,6 +343,7 @@ project.
   \begin{itemize}
   \item Lots of new contributors
   \item Lots of new stuff
+  \item Lots more automation with Continuous Integration services
   \item Turn new contributors into recurring ones
   \item Biopython 1.71 in the near future
   \end{itemize}
