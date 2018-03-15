@@ -23,10 +23,10 @@
 
 \title{%Hack to get the logo on the PDF front page:
 \vspace{-1.5in}
-\includegraphics[width=0.4\textwidth]{../presentation/figures/biopython.jpg} \\
+\includegraphics[width=0.4\textwidth]{biopython.jpg} \\
 \vspace{3mm}Biopython Project Update 2018}
 \author{
-	\underline{Ben Fulton}\thanks{Research Technologies, Indiana University, Bloomington, Indiana. Email: \href{mailto:befulton@iu.edu}{ssouravsingh12@gmail.com}},
+	\underline{Ben Fulton}\thanks{Research Technologies, Indiana University, Bloomington, Indiana. Email: \href{mailto:befulton@iu.edu}{befulton@iu.edu}},
     Christian Brueffer\thanks{Department of Clinical Sciences, Lund University, Lund, SE},
     Peter Cock\thanks{Information and Computational Sciences, James Hutton Institute, Invergowrie, Dundee, UK},\\
     and the Biopython Contributors\thanks{See \href{https://github.com/biopython/biopython/blob/master/CONTRIB.rst}{contributor listing on GitHub}.}}
@@ -45,43 +45,29 @@ License: Biopython License Agreement (BSD like, see \url{http://www.biopython.or
 The Biopython Project is a long-running distributed collaborative effort,
 supported by the Open Bioinformatics Foundation, which develops a freely
 available Python library for biological computation \cite{AppNote}.
-We present here details of the Biopython releases since BOSC 2017,
-namely Biopython 1.68, 1.69 and 1.70. Together these had 82 named
-contributors including 51 newcomers which reflects our policy of
+We present here details of the planned Biopython releases in 2018. 
+Since the 1.70 release 
+became available in July 2017, 55 unique users have contributed code 
+fixes or enhancements, including 32 newcomers. This reflects our policy of
 trying to encourage even small contributions.
 
-Biopython 1.68 (August 2016) was a relatively small release,
-with the main new feature being support for RSSB's new binary
-Macromolecular Transmission Format (MMTF) for structural data.
+2018 is expected to see the release of three new Biopython releases: 1.71, 1.72, and 1.73. The first is expected to be available in April 2018, and will include Python 3-compatible rich 
+comparison for all Bio.PDB objects, helping to unify the API and easing sorting.
+It also provides several new options and fixes for parsing and writing files, 
+including PIR format for sequences, mmCIF files, and Gene files. In addition,
+new codon tables 27-31 from NCBI (NCBI genetic code table version 4.2) were added.
+This release will also include updated HTML
+documentation based on the Sphinx documentation generator.
 
-Biopython 1.69 (April 2017) represents the start of our re-licensing plan, to transition away
+A further release, Biopython 1.72, is expected in the summer of 2018, and, if warranted, a final release for the year sometime in the fall.
+
+In 2017 we started a re-licensing plan, to transition away
 from our liberal but unique \emph{Biopython License Agreement} to the similar
-but very widely used \emph{3-Clause BSD License}. We are reviewing the code
-base authorship file-by-file, in order to gradually dual license the entire
-project.
+but very widely used \emph{3-Clause BSD License}. We are in the process of 
+reviewing the code base authorship file-by-file, in order to gradually dual 
+license the entire project.
 
-Major new features include: a new parser for the ExPASy Cellosaurus cell line
-database, catalogue and ontology; support for the UCSC Multiple Alignment Format (MAF),
-FSA sequencing files, version 4 of the Affymetrix CEL format; updates to the
-REBASE February 2017 restriction enzyme list;
-Bio.PDB.PDBList now can download more formats including MMTF;
-enhanced PyPy support by taking advantage of NumPy and compiling most of the Biopython C code modules.
-
-Biopython 1.70 (July 2017) has internal changes to better support the
-now standard \verb|pip| tool for Python package installation.
-Major new features include:
-support for Mauve's eXtended Multi-FastA (XMFA) file format,
-updates to our BLAST XML and MEME parsers, ExPASy support,
-and phylogenetic distance matrices.
-This release is noteworthy for our new logo (below),
-contributed by Patrick Kunzmann. This draws on our original double helix logo
-(above), and the blue and yellow colors of the current Python logo:
-
-\begin{center}
-\includegraphics[height=2.5cm]{../presentation/figures/biopython_logo_s.png}
-\end{center}
-
-All releases fixed miscellaneous bugs, enhanced the test suite,
+All releases fix miscellaneous bugs, enhanced the test suite,
 and continued efforts to follow the PEP8 and PEP257 coding style guidelines
 which is now checked automatically with GitHub-integrated continuous integration
 testing using \href{https://travis-ci.org/biopython/biopython/builds}{TravisCI}.
