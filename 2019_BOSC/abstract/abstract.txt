@@ -1,6 +1,8 @@
+(200 word limit for all ISMB/ECCB abstracts; the PDF is limited to one page for BOSC)
+
 Biopython is a long-running distributed collaborative effort, a freely available Python library for biological computation. We summarise recent project news, and look ahead.
 
-Releases 1.73 (December 2018) and 1.74 (expected May/June 2019) had incremental improvements, especially on the inline API documentation. Every public API should be documented this year.
+Releases 1.73 (December 2018) and 1.74 (expected May/June 2019) had incremental improvements, especially inline API documentation. Every public API should be documented this year.
 
 In 2017 we started a transition away from our liberal but unique Biopython License Agreement to the similar but very widely used 3-Clause BSD License. Already half the files in the main library have been dual licensed after reviewing authorship, and all new contributions are dual licensed.
 
