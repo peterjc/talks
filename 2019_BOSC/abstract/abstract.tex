@@ -1,0 +1,98 @@
+\documentclass[10pt,oneside]{article}
+
+%%%%%%%%%%%%%
+\setlength{\textheight}{8.75in} %Letter is 11in, less 2 for margins, less 0.25 for footer
+\setlength{\oddsidemargin}{0.0in} %gets +1inc
+\setlength{\evensidemargin}{0.0in} %gets +1inch
+\setlength{\textwidth}{6.50in} %Letter is 8.5, less 2 inches for margins
+\setlength{\topmargin}{0.5in}
+\setlength{\headheight}{0in}
+\setlength{\headsep}{0in}
+\setlength{\parindent}{0.25in}
+%%%%%%%%%%%%
+
+% use letters instead of symbols to accommodate >7 authors
+\makeatletter
+\let\@fnsymbol\@alph
+\makeatother
+
+\usepackage[utf8]{inputenc}
+\usepackage[numbers]{natbib}
+\usepackage{graphicx}
+\usepackage[colorlinks=true,citecolor=black,urlcolor=blue]{hyperref}
+
+\title{%Hack to get the logo on the PDF front page:
+\vspace{-1.5in}
+\includegraphics[width=0.3\textwidth]{biopython_logo_s.png} \\
+\vspace{3mm}Biopython Project Update 2019}
+\author{
+    Peter Cock\thanks{Information and Computational Sciences, James Hutton Institute, Invergowrie, Dundee, UK},\\
+    and the Biopython Contributors\thanks{See \href{https://github.com/biopython/biopython/blob/master/CONTRIB.rst}{contributor listing on GitHub}.}}
+\date{20\textsuperscript{th} Bioinformatics Open Source Conference (BOSC) 2019, Basel, Switzerland}
+
+\begin{document}
+\maketitle
+\thispagestyle{empty}
+
+\vspace{-0.2in}
+\noindent
+Website: \url{http://biopython.org} \\
+Repository: \url{https://github.com/biopython/biopython} \\
+License: Biopython License Agreement (BSD like, see \url{http://www.biopython.org/DIST/LICENSE}) \\
+
+The Biopython Project is a long-running distributed collaborative effort,
+supported by the Open Bioinformatics Foundation, which develops a freely
+available Python library for biological computation \cite{AppNote}. This
+talk will look ahead to the year to come, and give a summary of the project
+news since the 1.72 release in June 2018, and the talk at GCCBOSC 2018.
+
+While there were no major new modules introduced in Biopython 1.73
+(December 2018) or Biopython 1.74 (expected May/June 2019), there have
+been lots of incremental improvements.
+In terms of lines of code changed, a substantial proportion have been
+in-line documentation (Python docstrings), used to generate human readable
+API documentation. While we are still using epydoc for this, our continuous
+integration system has been generating more modern HTML output using Sphinx,
+which we hope to host on our domain, or at Read The Docs, making this work
+much more visible to the world. We have been using the tool \texttt{flake8}
+with various plugins for this (as well as checking coding style), showing
+a steady improvment in best practice compliance - every public API should
+be documented this year.
+
+In 2017 we started a re-licensing plan, to transition away
+from our liberal but unique \emph{Biopython License Agreement} to the similar
+but very widely used \emph{3-Clause BSD License}. We are reviewing the code
+base authorship file-by-file, to gradually dual license the entire project.
+All new contributions are dual licensed, and currently half the Python files
+in the main library have been dual licensed.
+
+Another important going effort is improving the unit test coverage. Sadly
+This is currently faily static at about $85\%$ (excluding online tests),
+but can be viewed online at
+\href{https://codecov.io/github/biopython/biopython/}{CodeCov.io}.
+
+We are using GitHub-integrated continuous integration testing on Linux (using
+\href{https://travis-ci.org/biopython/biopython/builds}{TravisCI}) and Windows
+(using \href{https://ci.appveyor.com/project/biopython/biopython/history}{AppVeyor}),
+including enforcing the Python PEP8 and PEP257 coding style guidelines.
+We hope to be able to recommend a simple \texttt{git pre-commit} hook
+for our contributors shortly, and have discussed the idea of adopting the
+new yet popular Python code formatting style tool \texttt{black} to reduce
+the human time costs in writing compliant code.
+
+Looking further ahead, in 2020, in line with most major scientific Python
+libraries, we will be dropping support for Python 2. See \url{https://python3statement.org/}
+
+Finally, since our last update talk in June 2018, Biopython has had 32 named
+contributors including 14 newcomers. This reflects our policy of trying to
+encourage even small contributions. This brings our total named contributor
+count to 248 since the project began, and looks likely to break 250 by our
+20th Birthday in August 2019.
+
+\begin{thebibliography}{}
+
+\bibitem[Cock {\it et al}., 2009]{AppNote}Cock, P.J.A., Antao, T., Chang, J.T., Chapman, B.A., Cox, C.J., Dalke, A., Friedberg, I., Hamelryck, T., Kauff, F., Wilczynski, B., de Hoon, M.J. (2009) Biopython: freely available Python tools for computational molecular biology and bioinformatics. {\it Bioinformatics} {\bf 25}(11) 1422-3. \href{http://dx.doi.org/10.1093/bioinformatics/btp163}{doi:10.1093/bioinformatics/btp163}
+
+\end{thebibliography}
+
+\end{document}
